@@ -1,0 +1,24 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 596px;
+}
+@font-face{
+  font-family: impossibilium;
+  src: url('imposs_accents.ttf') format('truetype');
+}
+
+#content_body {
+}
+h1{
+  text-align:center;
+  font-family:impossibilium;
+  font-size:2em;
+}
+p{
+  font-family:impossibilium;
+  font-size:1em;
+}
+
+img{
+}
