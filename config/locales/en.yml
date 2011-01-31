@@ -1,5 +1,39 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
+#
 en:
-  hello: "Hello world"
+  time:
+    format: '%l:%M %P'
+    #for French use '%H:%M'
+  daynames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  back: Back
+  show: Show
+  edit: Edit
+  destroy: Delete
+  actions: Actions
+  are_you_sure: Are you sure?
+  home: Home
+  practices:
+    index:
+      title: Classes
+      new_practice: New Class
+    location_select: Select the location
+    new:
+      title: Classes
+    edit:
+      title: Editing Class
+    show:
+      title: Classes
+    destroy:
+      title: Classes
+  locations:
+    index:
+      title: Locations
+      new_location: New Location  
+    new:
+      title: New Location
+    edit:
+      title: Editing Location
+    show:
+      title: Location
+

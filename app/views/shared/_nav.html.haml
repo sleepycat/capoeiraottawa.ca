@@ -1,0 +1,7 @@
+%ul{:id => 'nav'}
+  %li
+    =link_to_unless_current t('locations.index.title'), locations_path
+  %li
+    =link_to_unless_current t('practices.index.title'), practices_path
+  %li
+    =link_to_unless_current t('home'), root_path

@@ -1,0 +1,14 @@
+%h1= t('.title')
+%p= link_to t('.new_location'), new_location_path
+
+%table
+  %thead
+    %tr
+      %th= Location.human_attribute_name :name
+      %th= Practice.human_attribute_name :day
+      %th= Practice.human_attribute_name :start_time
+      %th= Practice.human_attribute_name :end_time
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    =render :partial => 'location', :collection => @locations

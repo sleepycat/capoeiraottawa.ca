@@ -1,0 +1,22 @@
+%h1= t('.title')
+%p= link_to t('.new_practice'), new_practice_path
+
+%table
+  %thead
+    %tr
+      %th= Practice.human_attribute_name :day
+      %th= Practice.human_attribute_name :start_time
+      %th= Practice.human_attribute_name :end_time
+      %th= Location.human_attribute_name :name
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for practice in @practices
+      %tr{ :class => cycle(:odd, :even) }
+        %td= t('daynames')[practice.day]
+        %td= practice.start_time.strftime(t('time.format'))
+        %td= practice.end_time.strftime(t('time.format'))
+        %td= practice.location.name
+        %td.action= link_to t('show'), practice
+        %td.action= link_to t('edit'), edit_practice_path(practice)
+        %td.action= link_to t('destroy'), practice, :confirm => I18n.t('are_you_sure'), :method => :delete

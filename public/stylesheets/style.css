@@ -1,4 +1,4 @@
-#content {
+body {
   margin-left: auto;
   margin-right: auto;
   width: 596px;
@@ -6,6 +6,10 @@
 @font-face{
   font-family: impossibilium;
   src: url('imposs_accents.ttf') format('truetype');
+}
+#nav li{
+  font-family:impossibilium;
+  display:inline;
 }
 
 #content_body {

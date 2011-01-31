@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'jquery-rails', '>= 0.2.6'
+gem 'omniauth'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :tag => 'v1.2.rc'
+gem 'declarative_authorization'
 gem 'mysql'
 gem 'haml'
 #gem 'sqlite3-ruby', :require => 'sqlite3'

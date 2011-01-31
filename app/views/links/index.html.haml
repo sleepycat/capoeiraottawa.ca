@@ -1,0 +1,18 @@
+%h1= t('.title')
+%p= link_to t('.new_link'), new_link_path
+
+%table
+  %thead
+    %tr
+      %th= Link.human_attribute_name :text
+      %th= Link.human_attribute_name :url
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for link in @links
+      %tr{ :class => cycle(:odd, :even) }
+        %td= link.text
+        %td= link.url
+        %td.action= link_to t('show'), link
+        %td.action= link_to t('edit'), edit_link_path(link)
+        %td.action= link_to t('destroy'), link, :confirm => t('are_you_sure'), :method => :delete

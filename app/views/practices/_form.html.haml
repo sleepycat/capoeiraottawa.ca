@@ -1,0 +1,31 @@
+= form_for @practice do |f|
+  - if @practice.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@practice.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @practice.errors.full_messages.each do |msg|
+        %li= msg
+  
+  
+  .field
+    = f.label :day
+    %br
+    = f.select :day, t('daynames').collect{|day| [day, I18n.t('daynames').index(day)]}
+  .field
+    = f.label :start_time
+    %br
+    = f.time_select :start_time
+  .field
+    = f.label :end_time
+    %br
+    = f.time_select :end_time
+  
+  .field
+    =f.label t('practices.location_select')
+    %br
+    =f.collection_select :location_id, @locations, :id, :name
+
+     
+
+    .actions
+    = f.submit
