@@ -1,3 +1,4 @@
+/*Jogos green: 00923f*/
 html { height: 100% }
 
 #map_canvas { 
@@ -26,9 +27,12 @@ body {
 }
 #nav {
   border-top: 2px solid;
+  border-bottom: 4px solid #00923f;
   background-color: #000;
-  -moz-border-radius-bottomleft: 1em;
-  -moz-border-radius-bottomright: 1em;
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
   font-size:1.2em;
 }
 #nav a {
