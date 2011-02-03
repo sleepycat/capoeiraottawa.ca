@@ -2,6 +2,8 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 #
 en:
+  application:
+    title: Capoeira Angola Ottawa
   time:
     format: '%l:%M %P'
     #for French use '%H:%M'
@@ -18,7 +20,8 @@ en:
       title: Classes
       new_practice: New Class
     location_select: Select the location
-    new:
+    new: 
+      new: New class
       title: Classes
     edit:
       title: Editing Class
@@ -31,9 +34,15 @@ en:
       title: Locations
       new_location: New Location  
     new:
+      new: New location
       title: New Location
     edit:
       title: Editing Location
     show:
       title: Location
-
+    confirm_destroy: Delete this location and its classes?  
+  devise:
+    sessions:
+      sign_in_link: Sign In
+      sign_up_link: Sign Up
+      sign_out_link: Sign Out

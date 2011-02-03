@@ -1,11 +1,45 @@
+html { height: 100% }
+
+#map_canvas { 
+  height: 600px;
+
+}
+
+.infowindow_actions li{
+  display: inline;
+}
+
 body {
+  background-color: #fff;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #333;
   margin-left: auto;
   margin-right: auto;
   width: 596px;
 }
+
 @font-face{
   font-family: impossibilium;
   src: url('imposs_accents.ttf') format('truetype');
+}
+#nav {
+  border-top: 2px solid;
+  background-color: #000;
+  -moz-border-radius-bottomleft: 1em;
+  -moz-border-radius-bottomright: 1em;
+  font-size:1.2em;
+}
+#nav a {
+  color: #fff;
+  text-decoration:none;
+}
+#nav a:hover{
+  text-decoration:underline;
+}
+#nav {
+  color: #fff;
 }
 #nav li{
   font-family:impossibilium;
@@ -25,4 +59,61 @@ p{
 }
 
 img{
+}
+
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  margin-top: 0px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
 }

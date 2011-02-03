@@ -1,4 +1,5 @@
 class PracticesController < ApplicationController
+  filter_resource_access
   # GET /practices
   # GET /practices.xml
   def index

@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+  filter_resource_access
   # GET /locations
   # GET /locations.xml
   def index
@@ -6,6 +7,7 @@ class LocationsController < ApplicationController
     @locations.each{|loc| loc.practices}
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render :json => @locations.to_json }
       format.xml  { render :xml => @locations }
     end
   end
@@ -16,7 +18,10 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html do 
+        @location.practices
+        render :partial => 'show', :layout => false 
+      end
       format.xml  { render :xml => @location }
     end
   end

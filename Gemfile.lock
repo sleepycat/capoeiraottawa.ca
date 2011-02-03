@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alexreisner/geocoder.git
+  revision: e68db72eb02ca7d003c7aa558d6dc828eb53c57c
+  specs:
+    rails-geocoder (0.9.7)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 1d6944d201513068619d301ecafd06f31c9ae6fe
   tag: v1.2.rc
@@ -147,3 +153,4 @@ DEPENDENCIES
   mysql
   omniauth
   rails (= 3.0.3)
+  rails-geocoder!
