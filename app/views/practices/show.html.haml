@@ -1,0 +1,14 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), practices_path
+  = link_to t('edit'), edit_practice_path(@practice)
+
+%dl
+  %dt= Practice.human_attribute_name :day
+  %dd= t('daynames')[@practice.day]
+  %dt= Practice.human_attribute_name :start_time
+  %dd= @practice.start_time.strftime(t('time.format'))
+  %dt= Practice.human_attribute_name :end_time
+  %dd= @practice.end_time.strftime(t('time.format'))
+  %dt= Location.human_attribute_name :name
+  %dd= @practice.location.name

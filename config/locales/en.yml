@@ -1,5 +1,48 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
+#
 en:
-  hello: "Hello world"
+  application:
+    title: Capoeira Angola Ottawa
+  time:
+    format: '%l:%M %P'
+    #for French use '%H:%M'
+  daynames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  back: Back
+  show: Show
+  edit: Edit
+  destroy: Delete
+  actions: Actions
+  are_you_sure: Are you sure?
+  home: Home
+  practices:
+    index:
+      title: Classes
+      new_practice: New Class
+    location_select: Select the location
+    new: 
+      new: New class
+      title: Classes
+    edit:
+      title: Editing Class
+    show:
+      title: Classes
+    destroy:
+      title: Classes
+  locations:
+    index:
+      title: Locations
+      new_location: New Location  
+    new:
+      new: New location
+      title: New Location
+    edit:
+      title: Editing Location
+    show:
+      title: Location
+    confirm_destroy: Delete this location and its classes?  
+  devise:
+    sessions:
+      sign_in_link: Sign In
+      sign_up_link: Sign Up
+      sign_out_link: Sign Out

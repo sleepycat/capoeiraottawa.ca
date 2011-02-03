@@ -1,4 +1,13 @@
 Angola::Application.routes.draw do
+
+  devise_for :users
+
+  resources :practices
+
+  resources :links
+
+  resources :locations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

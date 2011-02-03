@@ -1,0 +1,7 @@
+%tr{ :class => cycle(:odd, :even) }
+%td= "#{location.name} #{location.address}"
+=render :partial => 'practice', :collection => location.practices
+
+%td.action= link_to t('show'), location
+%td.action= link_to t('edit'), edit_location_path(location)
+%td.action= link_to t('destroy'), location, :confirm => I18n.t('are_you_sure'), :method => :delete

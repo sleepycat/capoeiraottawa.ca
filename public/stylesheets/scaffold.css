@@ -1,72 +1,9 @@
-html { height: 100% }
-
-#map_canvas { 
-  height: 600px;
-
-}
-
-.infowindow_actions li{
-  display: inline;
-}
-
-body {
-  background-color: #fff;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  color: #333;
-  margin-left: auto;
-  margin-right: auto;
-  width: 596px;
-}
-
-@font-face{
-  font-family: impossibilium;
-  src: url('imposs_accents.ttf') format('truetype');
-}
-#nav {
-  border-top: 2px solid;
-  background-color: #000;
-  -moz-border-radius-bottomleft: 1em;
-  -moz-border-radius-bottomright: 1em;
-  font-size:1.2em;
-}
-#nav a {
-  color: #fff;
-  text-decoration:none;
-}
-#nav a:hover{
-  text-decoration:underline;
-}
-#nav {
-  color: #fff;
-}
-#nav li{
-  font-family:impossibilium;
-  display:inline;
-}
-
-#content_body {
-}
-h1{
-  text-align:center;
-  font-family:impossibilium;
-  font-size:2em;
-}
-p{
- /* font-family:impossibilium; */
-  font-size:1em;
-}
-
-img{
-}
-
+body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
-  margin-top: 0px;
 }
 
 pre {

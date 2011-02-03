@@ -1,0 +1,32 @@
+%ul{:id => 'nav'}
+
+  %li
+    =link_to_unless_current t('home'), root_path
+  %li
+    =link_to_unless_current t('locations.index.title'), locations_path
+  
+  -if anybody_signed_in?
+    %li
+      =link_to_unless_current t('practices.index.title'), practices_path if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('locations.new.new'), new_location_path if current_user.has_role? :admin 
+
+    %li
+      =link_to_unless_current t('practices.new.new'), new_practice_path if current_user.has_role? :admin 
+  
+
+  -if anybody_signed_in?
+    %li
+      =link_to t('devise.sessions.sign_out_link'), destroy_user_session_path
+  -else    
+    %li
+      =link_to t('devise.sessions.sign_in_link'), new_user_session_path
+    %li
+      =link_to t('devise.sessions.sign_up_link'), new_user_registration_path
+        
+
+#flash
+  - unless flash.empty?
+    = content_tag :div, flash[:notice],  :class => "notice"  if flash[:notice]
+    = content_tag :div, flash[:warning], :class => "warning" if flash[:warning]
+    = content_tag :div, flash[:error],   :class => "error"   if flash[:error]

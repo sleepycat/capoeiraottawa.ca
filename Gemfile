@@ -1,12 +1,18 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql'
+gem 'jquery-rails', '>= 0.2.6'
+gem 'omniauth'
+#gem "oa-oauth", :require => "omniauth/oauth"
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :tag => 'v1.2.rc'
+gem 'declarative_authorization'
+gem "rails-geocoder", :require => "geocoder", :git => "git://github.com/alexreisner/geocoder.git"
 gem 'haml'
+
+group :development do
+  gem 'mysql'
+end
+
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server
