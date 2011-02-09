@@ -1,0 +1,17 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), events_path
+  = link_to t('edit'), edit_event_path(@event)
+
+%dl
+  %dt= Event.human_attribute_name :address
+  %dd= @event.address
+  %dt= Event.human_attribute_name :start_date
+  %dd= @event.start_date
+  %dt= Event.human_attribute_name :start_time
+  %dd= @event.start_time
+  %dt= Event.human_attribute_name :title
+  %dd= @event.title
+  %dt= Event.human_attribute_name :poster
+  =#debugger
+  %dd=image_tag @event.poster.url

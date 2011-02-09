@@ -10,7 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110203022110) do
+ActiveRecord::Schema.define(:version => 20110207011130) do
+
+  create_table "events", :force => true do |t|
+    t.decimal  "lat",                 :precision => 10, :scale => 0
+    t.decimal  "lng",                 :precision => 10, :scale => 0
+    t.string   "address"
+    t.date     "start_date"
+    t.time     "start_time"
+    t.string   "title"
+    t.binary   "poster_file"
+    t.binary   "poster_thumb_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
+  end
 
   create_table "links", :force => true do |t|
     t.string   "text"
