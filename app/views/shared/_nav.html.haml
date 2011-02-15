@@ -4,7 +4,10 @@
     =link_to_unless_current t('home'), root_path
   %li
     =link_to_unless_current t('locations.index.title'), locations_path
-  
+ 
+  %li
+    =link_to_unless_current t('events.index.title'), events_path
+
   -if anybody_signed_in?
     %li
       =link_to_unless_current t('practices.index.title'), practices_path if current_user.has_role? :admin 
@@ -14,6 +17,8 @@
     %li
       =link_to_unless_current t('practices.new.new'), new_practice_path if current_user.has_role? :admin 
   
+    %li
+      =link_to_unless_current t('events.new.new'), new_event_path if current_user.has_role? :admin 
 
   -if anybody_signed_in?
     %li

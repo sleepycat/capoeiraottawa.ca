@@ -1,0 +1,11 @@
+=div_for event do
+  %div.event_title_bar 
+    %div.event_title
+      ="#{event.start_date.strftime('%b %d %Y')}: #{event.title}"
+  -if current_user
+    %span.action
+      = link_to t('show'), event
+      = link_to t('edit'), edit_event_path(event) if current_user.roles.include? :admin
+      = link_to t('destroy'), event, :confirm => I18n.t('are_you_sure'), :method => :delete if current_user.roles.include? :admin
+
+  =link_to image_tag(event.poster.url(:medium)), event.poster.url

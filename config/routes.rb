@@ -1,5 +1,12 @@
 Angola::Application.routes.draw do
 
+  resources :events do
+    member do 
+      get :posters
+    end
+  end
+
+
   devise_for :users
 
   resources :practices

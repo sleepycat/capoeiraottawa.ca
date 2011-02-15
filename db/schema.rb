@@ -10,7 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110203022110) do
+ActiveRecord::Schema.define(:version => 20110215185903) do
+
+  create_table "events", :force => true do |t|
+    t.decimal  "lat",                                     :precision => 10, :scale => 0
+    t.decimal  "lng",                                     :precision => 10, :scale => 0
+    t.string   "address"
+    t.date     "start_date"
+    t.time     "start_time"
+    t.string   "title"
+    t.binary   "poster_file",         :limit => 16777215
+    t.binary   "poster_thumb_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
+    t.binary   "poster_medium_file",  :limit => 16777215
+    t.date     "end_date"
+  end
 
   create_table "links", :force => true do |t|
     t.string   "text"
@@ -46,8 +65,8 @@ ActiveRecord::Schema.define(:version => 20110203022110) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "email",                                              :null => false
+    t.string   "encrypted_password",   :limit => 128,                :null => false
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                       :default => 0

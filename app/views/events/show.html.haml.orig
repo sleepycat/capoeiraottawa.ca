@@ -10,6 +10,13 @@
   %dd= @event.start_date
   %dt= Event.human_attribute_name :start_time
   %dd= @event.start_time
+<<<<<<< HEAD
+  %dt= Event.human_attribute_name :title
+  %dd= @event.title
+  %dt= Event.human_attribute_name :poster
+  -#fix routing. img_tag needs a url...
+  %dd=#image_tag @event.poster_file
+=======
   %dt= Event.human_attribute_name :end_date
   %dd= @event.end_date
   %dt= Event.human_attribute_name :title
@@ -17,3 +24,4 @@
   %dt= Event.human_attribute_name :poster
   =#debugger
   %dd=image_tag @event.poster.url :thumb
+>>>>>>> events

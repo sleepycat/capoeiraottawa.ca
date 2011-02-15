@@ -1,0 +1,5 @@
+%h1= t('.title')
+-if current_user
+  %p= link_to t('.new_event'), new_event_path if current_user.roles.include? :admin
+
+=render @events

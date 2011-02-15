@@ -46,3 +46,14 @@ en:
       sign_in_link: Sign In
       sign_up_link: Sign Up
       sign_out_link: Sign Out
+  events:
+    index:
+      title: Events
+      new_event: New Event
+    new:
+      title: New Event
+      submit: Create event
+    show:
+      title: Showing event
+    edit:
+      title: Editing event
