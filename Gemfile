@@ -10,7 +10,7 @@ gem "rails-geocoder", :require => "geocoder", :git => "git://github.com/alexreis
 gem 'haml'
 gem 'paperclip', :git => "git://github.com/patshaughnessy/paperclip.git"
 group :development do
-  gem 'mysql'
+  gem 'pg'
 end
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'
