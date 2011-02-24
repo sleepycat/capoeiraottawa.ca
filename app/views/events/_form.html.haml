@@ -1,7 +1,7 @@
 = form_for(@event, :html => {:multipart => true}) do |f|
   - if @event.errors.any?
     #errorExplanation
-      %h2= "#{pluralize(@event.errors.count, 'error')} prohibited this user from being saved:"
+      %h2= "Oops!"
       %ul
       - @event.errors.full_messages.each do |msg|
         %li= msg

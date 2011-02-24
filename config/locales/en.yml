@@ -57,3 +57,12 @@ en:
       title: Showing event
     edit:
       title: Editing event
+#you can add user visible names for AR attribs here:
+  activerecord:
+    attributes:
+      event:
+        lng: ''
+#Validation messages
+  validations:
+    event:
+      empty_lat_lng: We couldn find that address. Please use a full street address.

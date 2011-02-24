@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
-  after_validation :fetch_coordinates
+  before_validation :fetch_coordinates
 
   has_attached_file :poster,
                     :storage => :database,
@@ -12,4 +12,6 @@ class Event < ActiveRecord::Base
                     :url => '/:class/:id/:attachment?style=:style'
 
   default_scope select_without_file_columns_for(:poster)
+
+  validates_presence_of :lng, :message => I18n.t('validations.event.empty_lat_lng')
 end
