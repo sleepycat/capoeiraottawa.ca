@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110215185903) do
+ActiveRecord::Schema.define(:version => 20110225061408) do
 
   create_table "events", :force => true do |t|
     t.decimal  "lat"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(:version => 20110215185903) do
     t.datetime "poster_updated_at"
     t.binary   "poster_medium_file"
     t.date     "end_date"
+  end
+
+  create_table "gcsjas", :force => true do |t|
+    t.text     "about"
+    t.text     "welcome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "links", :force => true do |t|

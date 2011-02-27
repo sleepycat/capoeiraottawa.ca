@@ -15,6 +15,11 @@ en:
   actions: Actions
   are_you_sure: Are you sure?
   home: Home
+  nav:
+    about: About
+      edit: Edit About
+    welcome: welcome
+      edit: Edit welcome
   practices:
     index:
       title: Classes
