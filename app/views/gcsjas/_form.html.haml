@@ -1,0 +1,15 @@
+- form_for('gcsjas/update') do |f|
+  
+  - if @gcsja.errors.any?
+    #errorExplanation
+      %h2= t('activerecord.errors.messages.gcsja.invalid_record')
+      %ul
+      - @gcsja.errors.full_messages.each do |msg|
+        %li= msg
+  .field
+    = f.label @attr.to_sym 
+    %br
+    = f.text_area @attr.to_sym
+
+  .actions
+    = f.submit I18n.t('submit')

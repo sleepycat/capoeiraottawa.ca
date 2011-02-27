@@ -1,0 +1,6 @@
+%h1
+  = t('gcsja.edit.title')
+
+= render 'form'
+
+== #{ link_to t('show'), @attr.to_s } | #{ link_to t('back'), @attr.to_s }

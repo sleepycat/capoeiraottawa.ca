@@ -1,0 +1,23 @@
+%h1 
+  =t('gcsjas.index.title')
+
+%table
+  %thead
+    %tr
+      %th 
+        =t('activerecord.attributes.gcsja.about')
+      %th 
+        =t('activerecord.attributes.gcsja.welcome')
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for gcsja in @gcsjas
+      %tr{ :class => cycle(:odd, :even) }
+        %td= gcsja.about
+        %td= gcsja.welcome
+        %td= link_to t('show'), gcsja
+        %td= link_to t('edit'), edit_gcsja_path(gcsja)
+        %td= link_to t('destroy'), gcsja, :confirm => I18n.t('confirm_delete'), :method => :delete
+
+%br
+= link_to t('gcsja.new'), new_gcsja_path
