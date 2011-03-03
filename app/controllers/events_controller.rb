@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   
-  filter_resource_access
+  filter_access_to :new, :edit, :create, :destroy, :update
   downloads_files_for :event, :poster
 
   # GET /events

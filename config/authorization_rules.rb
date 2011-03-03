@@ -6,23 +6,15 @@
 authorization do
   role :admin do
     has_omnipotence
-    ##has_permission_on [:locations, :users], :to => [:index, :show, :new, :create, :edit, :update, :destroy]
   end
 
   role :author do
     has_permission_on :authorization_rules, :to => :read
-    has_permission_on :locations, :to => [:index, :show]
-    has_permission_on :events, :to => [:index, :show]
-    has_permission_on :users, :to => [:create, :new, :update]
-    
+    includes :guest 
   end
 
   role :guest do
-    has_permission_on :locations, :to => :show
-    has_permission_on :events, :to => [:show, :index]
-
-    has_permission_on :gcsjas, :to => [:index, :show]
-    has_permission_on :events, :to => [:index, :show]
+    has_permission_on :events, :locations, :gcsjas, :to => [:show, :index]
     has_permission_on :users, :to => [:create, :new, :update]
   end
 end
