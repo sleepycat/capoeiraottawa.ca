@@ -1,10 +1,43 @@
 /*Jogos green: 00923f*/
-html { height: 100% }
-
-#map_canvas { 
-  height: 600px;
-
+html, body {
+height: 100%;
+margin: 0;
 }
+#container {
+position:relative;
+width:596px;
+}
+.topleft, .topright, .bottomleft, .bottomright {
+position:absolute;
+z-index:1000;
+background-image: url(/images/corners.png);
+width:20px;
+height:20px;
+}
+.topleft {
+left: 0; 
+top: 0;
+}
+.topright {
+right: 0;
+top: 0;
+background-position: top right;
+}
+.bottomright {
+right: 0; 
+bottom: 0; 
+background-position: bottom right;
+}
+.bottomleft {
+left: 0; 
+bottom: 0; 
+background-position: bottom left;
+}
+#map_canvas {
+width: 596px; 
+height: 600px;
+}
+
 img{
   border:none;
 }
