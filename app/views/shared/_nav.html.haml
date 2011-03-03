@@ -1,26 +1,15 @@
 %ul{:id => 'nav'}
 
   %li
-    =link_to_unless_current t('home'), 'welcome'
+    =link_to_unless_current t('nav.home'), '/welcome'
   %li
     =link_to_unless_current t('locations.index.title'), locations_path
  
   %li
     =link_to_unless_current t('events.index.title'), events_path
   %li
-    =link_to_unless_current t('nav.about'), 'about'
+    =link_to_unless_current t('nav.about'), '/about'
 
-  -if anybody_signed_in?
-    %li
-      =link_to_unless_current t('practices.index.title'), practices_path if current_user.has_role? :admin 
-    %li
-      =link_to_unless_current t('locations.index.new_location'), new_location_path if current_user.has_role? :admin 
-
-    %li
-      =link_to_unless_current t('practices.index.new_practice'), new_practice_path if current_user.has_role? :admin 
-  
-    %li
-      =link_to_unless_current t('events.index.new_event'), new_event_path if current_user.has_role? :admin 
 
   -if anybody_signed_in?
     %li
@@ -31,6 +20,10 @@
     %li
       =link_to t('devise.sessions.sign_up_link'), new_user_registration_path
         
+
+  -if anybody_signed_in?
+    -if current_user.has_role? :admin
+      =render :partial => 'shared/admin'
 
 #flash
   - unless flash.empty?

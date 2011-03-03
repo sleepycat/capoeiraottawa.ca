@@ -10,3 +10,7 @@
   
     %li
       =link_to_unless_current t('events.index.new_event'), new_event_path if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('admin.edit_welcome'), '/welcome/edit' if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('admin.edit_about'), '/about/edit' if current_user.has_role? :admin 

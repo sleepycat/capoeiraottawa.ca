@@ -1,22 +1,14 @@
 Angola::Application.routes.draw do
 
-#  resources :gcsjas
-match ':attr' => 'gcsjas#show', :via => :get, :attr => /about|welcome/
-match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => /about|welcome/
-match ':attr' => 'gcsjas#update', :via => :put, :attr => /about|welcome/ 
-
-
-
-
+  match ':attr' => 'gcsjas#show', :via => :get, :attr => /about|welcome/
+  match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => /about|welcome/
+  match ':attr' => 'gcsjas#update', :via => :post, :attr => /about|welcome/ 
 
   resources :events do
     member do 
       get :posters
     end
   end
-
-# match 'about' => 'gcsjas#about'
-# match 'welcome' => 'gcsjas#welcome'
 
   devise_for :users
 
@@ -26,10 +18,7 @@ match ':attr' => 'gcsjas#update', :via => :put, :attr => /about|welcome/
 
   resources :locations
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  root :to => "gcsja#welcome"
+  root :to => redirect("/welcome")
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

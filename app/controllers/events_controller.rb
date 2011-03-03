@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
+  
+  filter_resource_access
   downloads_files_for :event, :poster
+
   # GET /events
   # GET /events.xml
   def index

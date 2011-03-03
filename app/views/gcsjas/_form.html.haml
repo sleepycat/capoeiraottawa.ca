@@ -1,4 +1,5 @@
-- form_for('gcsjas/update') do |f|
+-#Why does this seem to hate the put method? Using post for the moment...`
+- form_for(:gcsja, {:url => "/#{@attr}", :html => { :method => :post }}) do |f|
   
   - if @gcsja.errors.any?
     #errorExplanation
@@ -9,7 +10,7 @@
   .field
     = f.label @attr.to_sym 
     %br
-    = f.text_area @attr.to_sym
+    = f.text_area @attr.to_sym, :size => '83x50'
 
   .actions
     = f.submit I18n.t('submit')

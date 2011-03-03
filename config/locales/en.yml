@@ -15,9 +15,17 @@ en:
   actions: Actions
   are_you_sure: Are you sure?
   home: Home
+  submit: Submit
+  gcsja:
+    edit:
+      title: Editing
+  successfully_updated: Successfully updated your record.
   nav:
-    about: About
-    welcome: welcome
+    about: About 
+    home: Home
+  admin:
+    edit_about: Edit about
+    edit_welcome: Edit welcome
   practices:
     index:
       title: Classes
