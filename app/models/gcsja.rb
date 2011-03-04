@@ -1,5 +1,8 @@
 class Gcsja < ActiveRecord::Base
 
+  validates :welcome, :haml_syntax => true
+
+
   def Gcsja.attrs_rgx
     "/#{Gcsja.attrs.join('/')}/"
   end
