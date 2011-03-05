@@ -1,10 +1,12 @@
  class HamlSyntaxValidator < ActiveModel::EachValidator  
    def validate_each(object, attribute, value)  
-      engine = Haml::Engine.new(value)
+      #TODO: add a render context here to allow Rails view helpers
+      #to be used in the haml content
       begin
-        engine.render
-      rescue Exception => e
-       object.errors[attribute] <<e.to_s
-     end  
+      engine = Haml::Engine.new(value)
+      puts engine.render
+      rescue Haml::SyntaxError => e
+         object.errors[attribute] <<e.message
+      end  
    end  
  end 

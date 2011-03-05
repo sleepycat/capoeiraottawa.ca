@@ -31,7 +31,12 @@ class GcsjasController < ApplicationController
         format.html { redirect_to("/#{params[:attr]}", :notice => I18n.t('successfully_updated')) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "#{params[:attr]}/edit" }
+        format.html do 
+          #TODO: This works but the URL is not correct.
+          #It should be /about/edit but it is just /about 
+          @attr = params[:attr]
+           render :action => "edit"
+        end
         format.xml  { render :xml => @gcsja.errors, :status => :unprocessable_entity }
       end
     end

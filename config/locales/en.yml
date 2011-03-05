@@ -73,6 +73,13 @@ en:
     attributes:
       event:
         lng: ''
+      gcsja:
+        about: About
+        welcome: Welcome
+    errors:
+      messages:
+        gcsja:
+          invalid_record: Oops!
 #Validation messages
   validations:
     event:
