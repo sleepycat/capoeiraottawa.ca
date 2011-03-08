@@ -2,7 +2,7 @@ Angola::Application.routes.draw do
 
   match ':attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx
   match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx
-  match ':attr' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx 
+  match ':attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx 
 
   resources :events do
     member do 

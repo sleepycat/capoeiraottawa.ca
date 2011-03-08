@@ -14,15 +14,12 @@ class GcsjasController < ApplicationController
   end
 
 
-  # GET /gcsjas/1/edit
   def edit
     @gcsja = Gcsja.first
     @attr = params[:attr]
   end
 
 
-  # PUT /gcsjas/1
-  # PUT /gcsjas/1.xml
   def update
     @gcsja = Gcsja.first
 
@@ -32,10 +29,8 @@ class GcsjasController < ApplicationController
         format.xml  { head :ok }
       else
         format.html do 
-          #TODO: This works but the URL is not correct.
-          #It should be /about/edit but it is just /about 
           @attr = params[:attr]
-           render :action => "edit"
+           render :controller => :gcsja, :action => "edit"
         end
         format.xml  { render :xml => @gcsja.errors, :status => :unprocessable_entity }
       end
