@@ -8,11 +8,9 @@ class GcsjasController < ApplicationController
     @attr = params[:attr]
 
     respond_to do |format|
-      format.html {render :template => "gcsjas/#{params[:attr]}.html.haml" }# show.html.erb
-      format.xml  { render :xml => @gcsja }
+      format.html {render :template => "gcsjas/#{params[:attr]}.html.haml" }
     end
   end
-
 
   def edit
     @gcsja = Gcsja.first
@@ -25,12 +23,12 @@ class GcsjasController < ApplicationController
 
     respond_to do |format|
       if @gcsja.update_attributes(params[:gcsja])
-        format.html { redirect_to("/#{params[:attr]}", :notice => I18n.t('successfully_updated')) }
+        format.html { redirect_to(gcsja_show_path(:attr => params[:attr]), :notice => I18n.t('successfully_updated')) }
         format.xml  { head :ok }
       else
         format.html do 
           @attr = params[:attr]
-           render :controller => :gcsja, :action => "edit"
+           render gcsja_edit_path(:attr => @attr)
         end
         format.xml  { render :xml => @gcsja.errors, :status => :unprocessable_entity }
       end

@@ -6,9 +6,12 @@ class CreateGcsjas < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    Gcsja.create_translation_table! :about => :text, :welcome => :text
   end
 
   def self.down
     drop_table :gcsjas
+
   end
 end

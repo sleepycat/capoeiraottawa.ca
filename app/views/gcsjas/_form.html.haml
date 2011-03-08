@@ -1,5 +1,5 @@
 -#Why does this seem to hate the put method? Using post for the moment...`
-- form_for(:gcsja, {:url => {:action => :edit, :attr => @attr}, :html => { :method => :post }}) do |f|
+- form_for(:gcsja, {:url => gcsja_update_path(:attr => @attr), :html => { :method => :post }}) do |f|
   
   - if @gcsja.errors.any?
     #errorExplanation

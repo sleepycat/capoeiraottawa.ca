@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'globalize3'
 gem 'rails', '3.0.5'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'omniauth'

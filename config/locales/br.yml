@@ -1,0 +1,87 @@
+
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+#
+br:
+  application:
+    title: Capoeira Angola Ottawa
+  time:
+    format: '%l:%M %P'
+    #for French use '%H:%M'
+  daynames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  back: Voltar
+  show: Mostrar
+  edit: Editar
+  destroy: Apagar
+  actions: Actions
+  are_you_sure: Você tem certeza?
+  home: Home
+  submit: Submit
+  gcsja:
+    edit:
+      title: Editing
+  successfully_updated: Successfully updated your record.
+  nav:
+    about: About 
+    home: Home
+  admin:
+    edit_about: Edit about
+    edit_welcome: Edit welcome
+  practices:
+    index:
+      title: Classes
+      new_practice: New Class
+    location_select: Select the location
+    new: 
+      new: Nova aula
+      title: Aulas
+    edit:
+      title: Editing Aula
+    show:
+      title: Aula
+    destroy:
+      title: Aulas
+  locations:
+    index:
+      title: Locations
+      new_location: New Location  
+    new:
+      new: New location
+      title: New Location
+    edit:
+      title: Editing Location
+    show:
+      title: Location
+    confirm_destroy: Delete this location and its classes?  
+  devise:
+    sessions:
+      sign_in_link: Sign In
+      sign_up_link: Sign Up
+      sign_out_link: Sign Out
+  events:
+    index:
+      title: Events
+      new_event: New Event
+    new:
+      title: New Event
+      submit: Create event
+    show:
+      title: Showing event
+    edit:
+      title: Editing event
+#you can add user visible names for AR attribs here:
+  activerecord:
+    attributes:
+      event:
+        lng: ''
+      gcsja:
+        about: About
+        welcome: Welcome
+    errors:
+      messages:
+        gcsja:
+          invalid_record: Oops!
+#Validation messages
+  validations:
+    event:
+      empty_lat_lng: We couldn find that address. Please use a full street address.

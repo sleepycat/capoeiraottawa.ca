@@ -1,24 +1,28 @@
 Angola::Application.routes.draw do
 
-  match ':attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx
-  match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx
-  match ':attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx 
+  scope "/:locale", :locale => /en|br|fr/ do
+    #the :as option creates _path and _url helpers for whatever value you give it.
+    match ':attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_show
+    match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_edit
+    match ':attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx, :as => :gcsja_update
 
-  resources :events do
-    member do 
-      get :posters
+    resources :events do
+      member do 
+        get :posters
+      end
     end
+
+    devise_for :users
+
+    resources :practices
+
+    resources :links
+
+    resources :locations
   end
 
-  devise_for :users
-
-  resources :practices
-
-  resources :links
-
-  resources :locations
-
-  root :to => redirect("/welcome")
+  match '/:locale', :to => redirect(){|params|"/#{params[:locale]}/welcome"}
+  root :to => redirect("/en/welcome")
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

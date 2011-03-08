@@ -1,7 +1,7 @@
 class Gcsja < ActiveRecord::Base
 
-  validates :welcome, :about, :haml_syntax => true
-
+#  validates :welcome, :about, :haml_syntax => true, :unless => lambda{|x| x.nil?}
+  translates :welcome, :about
 
   def Gcsja.attrs_rgx
     "/#{Gcsja.attrs.join('/')}/"
