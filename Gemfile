@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'net-sftp'
+gem 'net-ssh'
 gem 'globalize3'
 gem 'rails', '3.0.5'
 gem 'jquery-rails', '>= 0.2.6'
@@ -9,7 +11,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :tag => 'v1.2
 gem 'declarative_authorization'
 gem "rails-geocoder", :require => "geocoder", :git => "git://github.com/alexreisner/geocoder.git"
 gem 'haml'
-gem 'paperclip', :git => "git://github.com/patshaughnessy/paperclip.git"
+gem 'paperclip', :git => "git://github.com/sleepycat/paperclip.git"
 group :development do
   gem 'pg'
 end

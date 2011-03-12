@@ -1,17 +1,7 @@
 Angola::Application.routes.draw do
 
   scope "/:locale", :locale => /en|br|fr/ do
-    #the :as option creates _path and _url helpers for whatever value you give it.
-    match ':attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_show
-    match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_edit
-    match ':attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx, :as => :gcsja_update
-
-    resources :events do
-      member do 
-        get :posters
-      end
-    end
-
+    #These routes will get eaten by the matches for gcjsa so they need to be above them.
     devise_for :users
 
     resources :practices
@@ -19,6 +9,17 @@ Angola::Application.routes.draw do
     resources :links
 
     resources :locations
+
+    resources :events do
+      member do 
+        get :posters
+      end
+    end
+
+    #the :as option creates _path and _url helpers for whatever value you give it.
+    match ':attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_show
+    match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_edit
+    match ':attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx, :as => :gcsja_update
   end
 
   match '/:locale', :to => redirect(){|params|"/#{params[:locale]}/welcome"}
