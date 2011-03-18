@@ -12,8 +12,11 @@ gem 'declarative_authorization'
 gem "rails-geocoder", :require => "geocoder", :git => "git://github.com/alexreisner/geocoder.git"
 gem 'haml'
 gem 'paperclip', :git => "git://github.com/sleepycat/paperclip.git"
-group :development do
+group :development, :test do
   gem 'pg'
+  gem 'rspec-rails'
+  gem 'capybara', :git => "git://github.com/jnicklas/capybara.git"
+  gem 'launchy'
 end
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'

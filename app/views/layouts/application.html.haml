@@ -5,12 +5,23 @@
     %meta{:name => 'description', :content => "Capoeira Angola Ottawa is the Ottawa branch of Mestre Jogo De Dentro's Groupo Semente Do Jogo De Angola."}
     %title
       Capoeira Angola Ottawa
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag 'style'
     =javascript_include_tag :defaults 
     = csrf_meta_tag
   %body
-    =render :partial => 'shared/nav'
     #content
-      =yield
-
-
+      #header
+        =image_tag 'gcsja_logo_99x110.png'
+        #navigation
+          =render :partial => 'shared/nav'
+      %div{:class => "colmask threecol"}
+        .colmid
+          .colleft
+            .col1
+              =yield
+            .col2
+              =yield :left
+            .col3
+              =yield :right
+      #footer
+        =render 'shared/footer'

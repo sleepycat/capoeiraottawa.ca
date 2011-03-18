@@ -6,7 +6,10 @@ class GcsjasController < ApplicationController
   def show
     @gcsja = Gcsja.first
     @attr = params[:attr]
-
+    #these are methods of ApplicationController used to fill the sidebars. 
+    #TODO:Find a reasonable way to do this for the other controllers:
+    locations
+    events
     respond_to do |format|
       format.html {render :template => "gcsjas/#{params[:attr]}.html.haml" }
     end

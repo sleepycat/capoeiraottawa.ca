@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
 #    end
   end
 
+  def events
+    @events = Event.order('start_date desc')
+  end
+
+  def locations
+    @locations = Location.all
+    @locations.each{|loc| loc.practices}
+  end
+
   def self.default_url_options
     { :locale => I18n.locale }
   end
