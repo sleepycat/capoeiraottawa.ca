@@ -15,16 +15,8 @@
     #content
       #header
         =image_tag 'gcsja_logo_99x110.png'
-        #navigation
-          =render :partial => 'shared/nav'
-      %div{:class => "colmask threecol"}
-        .colmid
-          .colleft
-            .col1
-              =yield
-            .col2
-              =yield :left
-            .col3
-              =yield :right
+        =render :partial => 'shared/nav'
+      =yield
+      #clear
       #footer
         =render 'shared/footer'

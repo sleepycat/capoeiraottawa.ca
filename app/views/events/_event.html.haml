@@ -1,6 +1,6 @@
 =div_for event do
   %div.event_title_bar 
-    %div.event_title
+    %p.event_title
       ="#{event.start_date.strftime('%b %d %Y')}: #{event.title}" if event.start_date
   -if current_user
     %span.action

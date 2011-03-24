@@ -1,5 +1,5 @@
 
-var map_centre = new google.maps.LatLng(45.4045, -75.6989);
+var map_centre = new google.maps.LatLng(45.4205, -75.6989);
 var initialize = function(){
     $('.notice').delay(2000).fadeOut(2000);
     
@@ -23,7 +23,7 @@ var initialize = function(){
         mapTypeControlOptions: {
             mapTypeIds: [google.maps.MapTypeId.ROADMAP, s]
         },
-        zoom: 9,
+        zoom: 8,
         mapTypeId: s
     };
     var styledMapType = new google.maps.StyledMapType(mystyle, {
@@ -35,7 +35,7 @@ var initialize = function(){
 
     map.mapTypes.set(s, styledMapType);
     map.setCenter(map_centre);
-    map.setZoom(13);
+    map.setZoom(14);
 
     
     $.ajax({
