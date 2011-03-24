@@ -37,6 +37,25 @@ var initialize = function(){
     map.setCenter(map_centre);
     map.setZoom(14);
 
+    var image = new google.maps.MarkerImage('/images/gcsja.png',
+        // The size in pixels of the image
+        new google.maps.Size(26, 32),
+        // The origin of the image.
+        new google.maps.Point(0,0),
+        // The pixel value of the actual point of pointer.
+        new google.maps.Point(13, 32));
+
+    var shadow = new google.maps.MarkerImage('/images/gcsja_shadow.png',
+        new google.maps.Size(37, 32),
+        new google.maps.Point(0,0),
+        new google.maps.Point(13, 32));
+
+    //this traces out the clickable region of the marker. 
+    //Look into refining this:
+    var shape = {
+        coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+        type: 'poly'
+    };
     
     $.ajax({
         url: 'locations/',
@@ -50,6 +69,9 @@ var initialize = function(){
 
                 var marker = new google.maps.Marker({
                     position : latlng,
+                    icon: image,
+                    shadow: shadow,
+                    shape: shape,
                     title: a.location.name
                 });
 
