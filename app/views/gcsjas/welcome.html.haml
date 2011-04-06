@@ -1,18 +1,18 @@
 -content_for :left do
   %p.sidebar_title
-    Practice times:
+    =t('sidebar.practice_times')
   -@locations.each do |location|
     -location.practices.each do |practice|
       %p
         ="#{t('daynames')[practice.day]} #{practice.start_time.strftime(t('time.format'))} - #{practice.end_time.strftime(t('time.format'))} #{practice.location.name} #{practice.location.address}"
 
   %p
-    CONTACT:
+    =t('sidebar.contact')
   %p
     Alex Stephens 613.293.6947 capoeira.angola at bell.net 
 -content_for :right do
   %p.sidebar_title
-    Latest Events:
+    =t('sidebar.latest_events')
   -@events.each do |event|
     %p
       ="#{event.start_date}:"

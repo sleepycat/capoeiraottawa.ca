@@ -84,3 +84,7 @@ en:
   validations:
     event:
       empty_lat_lng: "We couldn't find that address. Please use a full street address."
+  sidebar:
+    practice_times: "Practice times:"
+    latest_events: "Latest events:"
+    contact: "Contact:"

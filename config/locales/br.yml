@@ -85,3 +85,7 @@ br:
   validations:
     event:
       empty_lat_lng: Nós não conseguimos encontrar o endereço. Por favor use um endereço completo.
+  sidebar:
+    practice_times: "Horas de prática:"
+    latest_events: "Últimos eventos:"
+    contact: "Contato:"
