@@ -83,4 +83,4 @@ en:
 #Validation messages
   validations:
     event:
-      empty_lat_lng: We couldn find that address. Please use a full street address.
+      empty_lat_lng: "We couldn't find that address. Please use a full street address."
