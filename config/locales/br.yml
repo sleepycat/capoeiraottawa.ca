@@ -4,7 +4,7 @@
 #
 br:
   application:
-    title: Capoeira Angola Ottawa
+    title: Capoeira Angola em Ottawa
   time:
     format: '%l:%M %P'
     #for French use '%H:%M'
@@ -15,68 +15,68 @@ br:
   destroy: Apagar
   actions: Actions
   are_you_sure: Você tem certeza?
-  home: Home
-  submit: Submit
+  home: Página inicial
+  submit: Enviar
   gcsja:
     edit:
-      title: Editing
-  successfully_updated: Successfully updated your record.
+      title: Edição
+  successfully_updated: Atualizado com sucesso o seu registro.
   nav:
-    about: About 
-    home: Home
+    about: Sobre
+    home: Página inicial
   admin:
-    edit_about: Edit about
-    edit_welcome: Edit welcome
+    edit_about: Editar sobre
+    edit_welcome: Edição de boas-vindas
   practices:
     index:
       title: Classes
       new_practice: New Class
-    location_select: Select the location
+    location_select: Selecione o local
     new: 
       new: Nova aula
       title: Aulas
     edit:
-      title: Editing Aula
+      title: Editar Aula
     show:
       title: Aula
     destroy:
       title: Aulas
   locations:
     index:
-      title: Locations
-      new_location: New Location  
+      title: Localidade
+      new_location: Nova Localidade  
     new:
-      new: New location
-      title: New Location
+      new: Nova localidade
+      title: Nova localidade
     edit:
-      title: Editing Location
+      title: Editar localidade
     show:
-      title: Location
-    confirm_destroy: Delete this location and its classes?  
+      title: Localidade
+    confirm_destroy: Excluir este local e suas aulas?
   devise:
     sessions:
-      sign_in_link: Sign In
-      sign_up_link: Sign Up
-      sign_out_link: Sign Out
+      sign_in_link: Entrar
+      sign_up_link: Cadastre-se
+      sign_out_link: Sair
   events:
     index:
-      title: Events
-      new_event: New Event
+      title: Eventos
+      new_event: Nova Evento
     new:
-      title: New Event
-      submit: Create event
+      title: Nova Evento
+      submit: Criar evento
     show:
-      title: Showing event
+      title: Mostrando evento
     edit:
-      title: Editing event
+      title: Edição evento
 #you can add user visible names for AR attribs here:
   activerecord:
     attributes:
       event:
         lng: ''
       gcsja:
-        about: About
-        welcome: Welcome
+        about: Sobre 
+        welcome: Bem-vindo
     errors:
       messages:
         gcsja:
@@ -84,4 +84,4 @@ br:
 #Validation messages
   validations:
     event:
-      empty_lat_lng: We couldn find that address. Please use a full street address.
+      empty_lat_lng: Nós não conseguimos encontrar o endereço. Por favor use um endereço completo.
