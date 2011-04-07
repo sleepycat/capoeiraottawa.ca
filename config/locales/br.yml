@@ -29,8 +29,8 @@ br:
     edit_welcome: Edição de boas-vindas
   practices:
     index:
-      title: Classes
-      new_practice: New Class
+      title: Aulas
+      new_practice: Nova Aula
     location_select: Selecione o local
     new: 
       new: Nova aula
@@ -41,6 +41,8 @@ br:
       title: Aula
     destroy:
       title: Aulas
+    created_success: Aula criada com sucesso.
+    updated_success: Aula atualizada com sucesso.
   locations:
     index:
       title: Localidade
@@ -53,6 +55,8 @@ br:
     show:
       title: Localidade
     confirm_destroy: Excluir este local e suas aulas?
+    created_success: Localização criado com sucesso.
+    update_success:  Localização atualizado com sucesso.
   devise:
     sessions:
       sign_in_link: Entrar
@@ -68,7 +72,10 @@ br:
     show:
       title: Mostrando evento
     edit:
-      title: Edição evento
+    title: Edição evento
+    created_succcess: Evento criado com sucesso.
+    update_success: Evento atualizado com sucesso.
+
 #you can add user visible names for AR attribs here:
   activerecord:
     attributes:

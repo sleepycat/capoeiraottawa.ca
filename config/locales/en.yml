@@ -40,6 +40,8 @@ en:
       title: Classes
     destroy:
       title: Classes
+    created_success: Class created successfully.
+    updated_success: Class updated successfully.
   locations:
     index:
       title: Locations
@@ -52,6 +54,8 @@ en:
     show:
       title: Location
     confirm_destroy: Delete this location and its classes?  
+    created_success: Location successfully created.
+    update_success: Location updated successfully.
   devise:
     sessions:
       sign_in_link: Sign In
@@ -68,6 +72,8 @@ en:
       title: Showing event
     edit:
       title: Editing event
+    create_success: Event created successfully.
+    update_success: Event updated successfully.
 #you can add user visible names for AR attribs here:
   activerecord:
     attributes:

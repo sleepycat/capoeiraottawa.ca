@@ -32,7 +32,7 @@ class LocationsController < ApplicationController
     @location = Location.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => 'application'}
       format.xml  { render :xml => @location }
     end
   end
@@ -49,7 +49,7 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       if @location.save
-        format.html { redirect_to(locations_url, :notice => 'Location was successfully created.') }
+        format.html { redirect_to(locations_url, :notice => I18n.t('locations.created_success')) }
         format.xml  { render :xml => @location, :status => :created, :location => @location }
       else
         format.html { render :action => "new" }
