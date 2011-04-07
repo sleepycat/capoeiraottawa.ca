@@ -1,5 +1,18 @@
 /*Jogos green: 00923f*/
 /*Rounded corners for the map*/
+
+#language_switcher{
+  padding-left:10px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+img.logo {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sidebar_title {
   font-weight: bold;
 }
@@ -161,9 +174,7 @@ div.field, div.actions {
 }
 #content_body{
 }
-#header{
-  text-align: center;
-}
+
 #header ul {
   clear:left;
   float:left;
