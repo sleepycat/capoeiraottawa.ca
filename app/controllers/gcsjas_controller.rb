@@ -1,13 +1,12 @@
 class GcsjasController < ApplicationController
 
-#we are breaking from the REST conventions here so filter_resource_access will not work:
+  #we are breaking from the conventions here so filter_resource_access will not work:
   filter_access_to :edit, :update
 
   def show
     @gcsja = Gcsja.first
     @attr = params[:attr]
     #these are methods of ApplicationController used to fill the sidebars. 
-    #TODO:Find a reasonable way to do this for the other controllers:
     locations
     events
     respond_to do |format|
@@ -23,6 +22,7 @@ class GcsjasController < ApplicationController
 
   def update
     @gcsja = Gcsja.first
+    @attr = params[:attr]
 
     respond_to do |format|
       if @gcsja.update_attributes(params[:gcsja])
@@ -30,10 +30,9 @@ class GcsjasController < ApplicationController
         format.xml  { head :ok }
       else
         format.html do 
-          @attr = params[:attr]
-           render gcsja_edit_path(:attr => @attr)
+          #render :template => "gcsjas/#{params[:attr]}.html.haml"
+          render :action => :edit
         end
-        format.xml  { render :xml => @gcsja.errors, :status => :unprocessable_entity }
       end
     end
   end

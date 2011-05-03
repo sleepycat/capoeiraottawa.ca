@@ -17,9 +17,9 @@ Angola::Application.routes.draw do
     end
 
     #the :as option creates _path and _url helpers for whatever value you give it.
-    match ':attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_show
-    match ':attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_edit
-    match ':attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx, :as => :gcsja_update
+    match '/:attr' => 'gcsjas#show', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_show
+    match '/:attr/edit' => 'gcsjas#edit', :via => :get, :attr => Gcsja.attrs_rgx, :as => :gcsja_edit
+    match '/:attr/edit' => 'gcsjas#update', :via => :post, :attr => Gcsja.attrs_rgx, :as => :gcsja_update
   end
 
   match '/:locale', :to => redirect(){|params|"/#{params[:locale]}/welcome"}

@@ -1,7 +1,7 @@
 -content_for :left do
   %p.sidebar_title
     =t('sidebar.practice_times')
-  -@locations.each do |location|
+  -@locations.try(:each) do |location|
     -location.practices.each do |practice|
       %p
         ="#{t('daynames')[practice.day]} #{practice.start_time.strftime(t('time.format'))} - #{practice.end_time.strftime(t('time.format'))} #{practice.location.name} #{practice.location.address}"
@@ -13,7 +13,7 @@
 -content_for :right do
   %p.sidebar_title
     =t('sidebar.latest_events')
-  -@events.each do |event|
+  -@events.try(:each) do |event|
     %p
       ="#{event.start_date}:"
     %p
