@@ -111,8 +111,7 @@ div.field, div.actions {
   display: table;
 }
 
-#error_explanation {
-  width: 450px;
+#errorExplanation {
   border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;
@@ -120,7 +119,7 @@ div.field, div.actions {
   background-color: #f0f0f0;
 }
 
-#error_explanation h2 {
+#errorExplanation h2 {
   text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
@@ -131,9 +130,9 @@ div.field, div.actions {
   color: #fff;
 }
 
-#error_explanation ul li {
+#errorExplanation ul li {
   font-size: 12px;
-  list-style: square;
+  list-style: none;
 }
 
 /* Footer styles */
