@@ -17,6 +17,5 @@
         %td= practice.start_time.strftime(t('time.format'))
         %td= practice.end_time.strftime(t('time.format'))
         %td= practice.location.name
-        %td.action= link_to t('show'), practice
         %td.action= link_to t('edit'), edit_practice_path(practice)
         %td.action= link_to t('destroy'), practice, :confirm => I18n.t('are_you_sure'), :method => :delete
