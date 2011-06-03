@@ -2,6 +2,8 @@ Angola::Application.routes.draw do
 
   scope "/:locale", :locale => /en|br|fr/ do
     #These routes will get eaten by the matches for gcjsa so they need to be above them.
+    resources :videos, :only => :index
+
     devise_for :users
 
     resources :practices

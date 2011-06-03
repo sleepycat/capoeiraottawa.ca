@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-
+gem 'downthetube', :git => 'git@github.com:sleepycat/downthetube.git'
 gem 'net-sftp'
 gem 'net-ssh'
 gem 'globalize3'

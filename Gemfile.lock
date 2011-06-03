@@ -34,6 +34,12 @@ GIT
       activerecord
       activesupport
 
+PATH
+  remote: /home/mike/projects/downthetube
+  specs:
+    downthetube (0.0.1)
+      gdata (>= 1.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -85,6 +91,7 @@ GEM
     fastthread (1.0.7)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    gdata (1.1.2)
     gem_plugin (0.2.3)
     globalize3 (0.0.11)
       activemodel (>= 3.0.0)
@@ -222,6 +229,7 @@ DEPENDENCIES
   capybara!
   declarative_authorization
   devise!
+  downthetube!
   globalize3
   haml
   jquery-rails (>= 0.2.6)

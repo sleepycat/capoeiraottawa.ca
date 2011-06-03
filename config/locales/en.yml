@@ -20,6 +20,9 @@ en:
     edit:
       title: Editing
   successfully_updated: Successfully updated your record.
+  videos:
+    index:
+      title: Videos
   nav:
     about: About 
     home: Home

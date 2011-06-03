@@ -1,6 +1,21 @@
 /*Jogos green: 00923f*/
 /*Rounded corners for the map*/
 
+.video{
+  padding:0.5em;
+  margin-top: 20px;
+}
+.video_thumbnail{
+  text_align:center;
+}
+.video_title > p{
+  font-size: 1.3em;
+ padding: 0.3em; 
+}
+.video_description{
+ padding: 0.3em; 
+}
+
 #language_switcher{
   padding-left:10px;
   padding-right: 10px;
