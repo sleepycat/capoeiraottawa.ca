@@ -34,8 +34,9 @@ GIT
       activerecord
       activesupport
 
-PATH
-  remote: /home/mike/projects/downthetube
+GIT
+  remote: git@github.com:sleepycat/downthetube.git
+  revision: f90531a4249868e8b9d2b2f585a24288e07aea5e
   specs:
     downthetube (0.0.1)
       gdata (>= 1.0.0)
