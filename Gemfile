@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
-gem 'downthetube', :git => 'git@github.com:sleepycat/downthetube.git'
+gem 'downthetube' #, :git => 'git@github.com:sleepycat/downthetube.git'
 gem 'net-sftp'
 gem 'net-ssh'
 gem 'globalize3'
-gem 'rails', '3.0.5'
+gem 'rails', '3.0.7'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'omniauth'
 #gem "oa-oauth", :require => "omniauth/oauth"
