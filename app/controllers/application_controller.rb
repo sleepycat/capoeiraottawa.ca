@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def events
-    @events = Event.order('start_date desc')
+    @events = Event.order('start_date desc').limit(2)
   end
 
   def locations
