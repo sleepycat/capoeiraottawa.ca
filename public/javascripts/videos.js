@@ -7,7 +7,7 @@ $(function(){
     
     var yt_id = $('#video_youtube_id').val()
     
-    if(yt_id.match(/\w{11}/)){
+    if(yt_id.match(/(\w|-){11,16}/)){
       
       $('#video_youtube_id').css({'border':'1px solid #3C3C3C'});
 
