@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110611203343) do
+ActiveRecord::Schema.define(:version => 20110612153936) do
 
   create_table "events", :force => true do |t|
     t.decimal  "lat"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(:version => 20110611203343) do
     t.integer  "video_id"
     t.string   "locale"
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(:version => 20110611203343) do
 
   create_table "videos", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.string   "url"
     t.string   "youtube_id"
     t.string   "small_thumbnail"
