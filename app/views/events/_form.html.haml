@@ -3,8 +3,8 @@
     #errorExplanation
       %h2= "Oops!"
       %ul
-      - @event.errors.full_messages.each do |msg|
-        %li= msg
+        - @event.errors.full_messages.each do |msg|
+          %li= msg
   
   .field
     = f.label :title

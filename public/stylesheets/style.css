@@ -136,6 +136,7 @@ div.field, div.actions {
 #errorExplanation {
   border: 2px solid red;
   padding: 7px;
+  margin-top: 1em;
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
@@ -152,9 +153,10 @@ div.field, div.actions {
   color: #fff;
 }
 
-#errorExplanation ul li {
+#errorExplanation ul > li {
   font-size: 12px;
   list-style: none;
+  padding:0.3em;
 }
 
 /* Footer styles */

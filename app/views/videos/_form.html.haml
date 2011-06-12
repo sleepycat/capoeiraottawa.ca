@@ -5,8 +5,8 @@
     #errorExplanation
       %h2= "Oops!"
       %ul
-      - @video.errors.full_messages.each do |msg|
-        %li= msg
+        - @video.errors.full_messages.each do |msg|
+          %li= msg
   %br
   -if controller.action_name == 'new'
     =f.label t('.enter_video_id')
