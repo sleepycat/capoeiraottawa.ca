@@ -3,7 +3,7 @@ class VideosController < ApplicationController
   respond_to :html, :json
 
   def index
-    @videos = Video.all
+    @videos = Video.order('created_at desc')
     respond_with @videos
   end
   
