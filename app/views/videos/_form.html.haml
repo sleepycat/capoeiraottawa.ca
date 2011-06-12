@@ -14,8 +14,8 @@
     =f.label :youtube_id
   %br
   %span.video_getter
-    =f.text_field :youtube_id, :disabled => (controller.action_name == 'new' ? false : 'disabled')
-    =image_tag "get_video.png", :id => "get_video" if controller.action_name == 'new'
+    =f.text_field :youtube_id, :disabled => (controller.action_name == 'edit' ? true : false)
+    =image_tag "get_video.png", :id => "get_video" unless controller.action_name == 'edit'
   %br
   =f.hidden_field :large_thumbnail
   %img{:id => "large_thumbnail", :src => @video.try(:large_thumbnail)}
