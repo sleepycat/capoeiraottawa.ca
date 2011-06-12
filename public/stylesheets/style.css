@@ -1,8 +1,16 @@
 /*Jogos green: 00923f*/
 /*Rounded corners for the map*/
+.edit_video{
+  margin: 0.5em;
+}
+.action_links, .video, .event, #main{
+  padding:0.5em;
+}
+.action_links > a{
+  padding-right:0.5em;
+}
 
 .video{
-  padding:0.5em;
   margin-top: 20px;
 }
 .video_thumbnail{
@@ -10,9 +18,8 @@
 }
 .video_title > p{
   font-size: 1.3em;
- padding: 0.3em; 
 }
-.video_description{
+.video_description, .video_title{
  padding: 0.3em; 
 }
 
@@ -180,7 +187,6 @@ div.field, div.actions {
   height: 100%;
  }
 #main{
-  padding: 0.5em;
   text-align:left;
   margin-left:auto;
   margin-right:auto;

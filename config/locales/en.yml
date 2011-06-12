@@ -23,6 +23,13 @@ en:
   videos:
     index:
       title: Videos
+    new: New Video
+    created_success: Successfully saved the video.
+    destroy_success: Successfully deleted.
+    update_success: The video info has been updated.
+    get_video: "Get this video"
+    form:
+      enter_video_id: "Enter the Youtube ID of the video"
   nav:
     about: About 
     home: Home
@@ -80,6 +87,13 @@ en:
 #you can add user visible names for AR attribs here:
   activerecord:
     attributes:
+      video:
+        youtube_id: Youtube ID
+        url: URL
+        title: Title
+        description: Description
+        duration: Duration
+        uploader: Uploader
       event:
         lng: ''
       gcsja:

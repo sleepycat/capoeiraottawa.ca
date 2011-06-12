@@ -1,5 +1,18 @@
 module ApplicationHelper
+  
 
+  def action_links_for obj, options = {} 
+    if current_user
+      content_tag :span, :class => "action_links" do 
+        content = ""
+        content += link_to(t('show'), polymorphic_path(obj)) unless options[:show] == false
+        content += link_to( t('edit'), edit_polymorphic_path(obj)) if current_user.has_role? :admin
+        content += link_to t('destroy'), obj, :confirm => I18n.t('are_you_sure'), :method => :delete if current_user.has_role? :admin
+        content.html_safe
+      end
+    end
+  end
+  
   def language_switcher
     content_tag :span, :id => "language_switcher" do
       links = ""

@@ -2,7 +2,8 @@
   .video_title
     %p
       =video.title
-  %iframe{:class =>"youtube-player", :type => "text/html", :width => "580", :height => "385", :src => "http://www.youtube.com/embed/#{video.id}", :frameborder => "0"}
+  =embed video
   .video_description
     %p
       =video.description
+  =action_links_for video

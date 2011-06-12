@@ -1,0 +1,8 @@
+=link_to t('back'), videos_path
+%br
+.video_title
+  =@video.title
+=embed(@video)
+.video_description
+  =@video.description
+=action_links_for @video, :show => false

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110308154900) do
+ActiveRecord::Schema.define(:version => 20110611203343) do
 
   create_table "events", :force => true do |t|
     t.decimal  "lat"
@@ -98,5 +98,29 @@ ActiveRecord::Schema.define(:version => 20110308154900) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "video_translations", :force => true do |t|
+    t.integer  "video_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "video_translations", ["video_id"], :name => "index_video_translations_on_video_id"
+
+  create_table "videos", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "url"
+    t.string   "youtube_id"
+    t.string   "small_thumbnail"
+    t.string   "large_thumbnail"
+    t.string   "uploader"
+    t.string   "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

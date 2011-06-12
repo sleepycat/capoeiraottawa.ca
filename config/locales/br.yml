@@ -21,6 +21,16 @@ br:
     edit:
       title: Edição
   successfully_updated: Atualizado com sucesso o seu registro.
+  videos:
+    index:
+      title: Videos
+    new: Novo Video
+    created_success: Salvo com sucesso o vídeo.
+    destroy_success: Apagado com sucesso.
+    update_success: A informação de vídeo foi atualizada.
+    get_video: "Vê este vídeo"
+    form:
+      enter_video_id: "Digite o ID do vídeo Youtube"
   nav:
     about: Sobre
     home: Página inicial
@@ -79,6 +89,13 @@ br:
 #you can add user visible names for AR attribs here:
   activerecord:
     attributes:
+      video:
+        youtube_id: Youtube ID
+        url: URL
+        title: Título
+        description: Descrição
+        duration: Duração
+        uploader: De
       event:
         lng: ''
       gcsja:

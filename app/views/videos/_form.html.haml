@@ -1,0 +1,42 @@
+=link_to t('back'), videos_path
+
+=form_for @video do |f|
+  - if @video.errors.any?
+    #errorExplanation
+      %h2= "Oops!"
+      %ul
+      - @video.errors.full_messages.each do |msg|
+        %li= msg
+  %br
+  -if controller.action_name == 'new'
+    =f.label t('.enter_video_id')
+  -else
+    =f.label :youtube_id
+  %br
+  %span.video_getter
+    =f.text_field :youtube_id, :disabled => (controller.action_name == 'new' ? false : 'disabled')
+    =image_tag "get_video.png", :id => "get_video" if controller.action_name == 'new'
+  %br
+  =f.hidden_field :large_thumbnail
+  %img{:id => "large_thumbnail", :src => @video.try(:large_thumbnail)}
+  =f.hidden_field :small_thumbnail
+  =f.hidden_field :url  
+  %br
+  =f.label :title
+  %br
+  =f.text_field :title, :size => 51
+  %br
+  =f.label :description
+  %br
+  =f.text_area :description, :cols => 66
+  %br
+  =f.label :duration, :size => 51
+  %br
+  =f.text_field :duration, :size => 51, :disabled => (controller.action_name == 'edit' ? true : false)
+
+  %br
+  =f.label :uploader
+  %br
+  =f.text_field :uploader, :size => 51, :disabled => (controller.action_name == 'edit' ? true : false)
+  %br
+  =f.submit 

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'downthetube', '0.0.5'
+gem 'downthetube', '0.0.8' #:path => "/home/mike/projects/downthetube"
 gem 'net-sftp'
 gem 'net-ssh'
 gem 'globalize3'
