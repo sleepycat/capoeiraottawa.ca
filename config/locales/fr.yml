@@ -1,0 +1,112 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+#
+fr:
+  application:
+    title: Capoeira Angola à Ottawa
+  time:
+    format: '%H:%M'
+  daynames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+  back: Retour
+  show: Afficher les détails
+  edit: Modifier
+  destroy: Supprimer
+  actions: Actions
+  are_you_sure: Êtes-vous certain?
+  home: Accueil
+  submit: Soumettre
+  gcsja:
+    edit:
+      title: Modifications
+  successfully_updated: Modifications enregistrées
+  videos:
+    index:
+      title: Vidéos
+    new: Nouvelle vidéo
+    created_success: "Nouvelle vidéo enregistrée avec succès."
+    destroy_success: "Vidéo supprimée"
+    update_success: "L'information à été mise à jour."
+    get_video: "Importer cette vidéo"
+    form:
+      enter_video_id: "Entrer l'ID YouTube de cette vidéo"
+  nav:
+    about: À propos
+    home: Accueil
+  admin:
+    edit_about: "Modifier l'onglet À propos"
+    edit_welcome: "Modifier l'onglet Accueil"
+  practices:
+    index:
+      title: Cours
+      new_practice: Nouveau cours
+    location_select: Sélectionner le lieu
+    new: 
+      new: Nouveau cours
+      title: Cours
+    edit:
+      title: Modifier un cours
+    show:
+      title: Cours
+    destroy:
+      title: Cours
+    created_success: Cours créé avec succès
+    updated_success: Modifications enregistrées
+  locations:
+    index:
+      title: Lieux de pratique
+      new_location: Nouveau lieu de pratique
+    new:
+      new: Nouveau lieu de pratique
+      title: Nouveau lieu de pratique
+    edit:
+      title: Modifier le lieu de pratique
+    show:
+      title: Lieu de pratique
+    confirm_destroy: "Supprimer ce lieu de pratique et ses cours associés?"
+    created_success: "Lieu de pratique créé avec succès"
+    update_success: "Modifications enregistrées avec succès"
+  devise:
+    sessions:
+      sign_in_link: Se connecter
+      sign_up_link: Créer un nouveau compte
+      sign_out_link: Se déconnecter
+  events:
+    index:
+      title: Évènements
+      new_event: Nouvel évènement
+    new:
+      title: Nouvel évènement
+      submit: Créer un nouvel évènement
+    show:
+      title: "Voir l'évènement"
+    edit:
+      title: "Modifier l'évènement"
+    create_success: "Évènement créé avec succès"
+    update_success: "Modifications enregistrées avec succès"
+#you can add user visible names for AR attribs here:
+  activerecord:
+    attributes:
+      video:
+        youtube_id: ID YouTube
+        url: URL
+        title: Titre
+        description: Description
+        duration: Durée
+        uploader: Uploader #Nom de la personne qui a initialement téléchargé la vidéo sur YouTube
+      event:
+        lng: ''
+      gcsja:
+        about: À propos
+        welcome: Bienvenue
+    errors:
+      messages:
+        gcsja:
+          invalid_record: Erreur!
+#Validation messages
+  validations:
+    event:
+      empty_lat_lng: "Nous n'avons pas pu localiser cette adresse. SVP, veuillez utiliser une adresse valide."
+  sidebar:
+    practice_times: "Horaire des cours:"
+    latest_events: "Évènements récents:"
+    contact: "Contact:"
