@@ -1,17 +1,18 @@
 -if anybody_signed_in?
-  %li
-    =link_to_unless_current t('practices.index.title'), practices_path if current_user.has_role? :admin 
-  %li
-    =link_to_unless_current t('locations.index.new_location'), new_location_path if current_user.has_role? :admin 
+  %ul
+    %li
+      =link_to_unless_current t('practices.index.title'), practices_path if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('locations.index.new_location'), new_location_path if current_user.has_role? :admin 
 
-  %li
-    =link_to_unless_current t('practices.index.new_practice'), new_practice_path if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('practices.index.new_practice'), new_practice_path if current_user.has_role? :admin 
 
-  %li
-    =link_to_unless_current t('events.index.new_event'), new_event_path if current_user.has_role? :admin 
-  %li
-    =link_to t('videos.new'), new_video_path if current_user.has_role? :admin 
-  %li
-    =link_to_unless_current t('admin.edit_welcome'), gcsja_edit_url(:attr => "welcome") if current_user.has_role? :admin 
-  %li
-    =link_to_unless_current t('admin.edit_about'), gcsja_edit_url(:attr => "about") if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('events.index.new_event'), new_event_path if current_user.has_role? :admin 
+    %li
+      =link_to t('videos.new'), new_video_path if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('admin.edit_welcome'), gcsja_edit_url(:attr => "welcome") if current_user.has_role? :admin 
+    %li
+      =link_to_unless_current t('admin.edit_about'), gcsja_edit_url(:attr => "about") if current_user.has_role? :admin 

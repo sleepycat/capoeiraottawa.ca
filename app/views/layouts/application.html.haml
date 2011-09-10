@@ -10,18 +10,17 @@
     = csrf_meta_tag
     =render :partial => 'shared/tracking'
   %body
+    #header
+      =image_tag 'gcsja_logo_99x110.png', :class => "logo"
+      =render :partial => 'shared/nav'
     #content
-      #header
-        =image_tag 'gcsja_logo_99x110.png', :class => "logo"
-        =render :partial => 'shared/nav'
-      #content_body
-        #rightcol
-          =yield :right
-        #leftcol
-          =yield :left
-        #main
-          =yield
-        #clear
-      #footer
+      #main
+        =yield
+      #leftcol
+        =yield :left
+      #rightcol
+        =yield :right
+      #clear
+    #footer
   
     =javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', 'rails', 'application'
