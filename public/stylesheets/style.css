@@ -42,6 +42,9 @@ p, h1, h2, h3, a { font-family: sans-serif;}
 
 h1 {
   font-size:18px;
+  padding-top:1.8em;
+  padding-bottom:0.8em;
+
 }
 
 p {
@@ -92,10 +95,6 @@ p {
   src: url('imposs_accents.ttf') format('truetype');
 }
 
-ul{
-margin-top: 0px;
-margin-bottom 0px;
-}
 #nav a {
   color: #fff;
   text-decoration:none;
@@ -108,6 +107,7 @@ margin-bottom 0px;
 
 #nav {
   color: #fff;
+  padding-bottom:0.6em;
 }
 
 #nav li {
@@ -201,7 +201,6 @@ div.field, div.actions {
   clear:left;
   float:left;
   width:100%;
-  margin:4px 0 0 0;
   padding:0;
   border-bottom:4px solid #00923F;
 }
