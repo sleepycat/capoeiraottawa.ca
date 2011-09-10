@@ -4,7 +4,9 @@
   -@locations.try(:each) do |location|
     -location.practices.each do |practice|
       %p
-        ="#{t('daynames')[practice.day]} #{practice.start_time.strftime(t('time.format'))} - #{practice.end_time.strftime(t('time.format'))} #{practice.location.name} #{practice.location.address}"
+        ="#{t('daynames')[practice.day].pluralize}"
+        %br
+        ="#{practice.start_time.strftime(t('time.format'))} - #{practice.end_time.strftime(t('time.format'))} #{practice.location.name} #{practice.location.address}"
 
   %p
     =t('sidebar.contact')
