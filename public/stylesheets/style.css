@@ -30,7 +30,9 @@
 
 #language_switcher{
   padding-left:10px;
-  padding-right: 10px;
+  padding-right: 80px;
+  position: absolute;
+  right: 0px;
 }
 
 #language_switcher img{
@@ -51,7 +53,6 @@ p, h1, h2, h3, a { font-family: sans-serif;}
 
 h1 {
   font-size:18px;
-
 }
 
 p {
