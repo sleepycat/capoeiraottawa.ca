@@ -7,6 +7,19 @@ fr:
   time:
     format: '%H:%M'
   daynames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+#This date setting is important for dealing with a Rails  bug
+#discussed here:
+#http://i18n.lighthouseapp.com/projects/14947/tickets/12-i18n-and-date_select-exception
+  date:
+    order: [ :year, :month, :day ]
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+    day_names: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+    #abbr_day_names: [S, P, A, T, K, Pn, Š] 
+    month_names: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+    #abbr_month_names: [~, Sau, Vas, Kov, Bal, Geg, Bir, Lie, Rugs, Rugp, Spa, Lap, Gruo]
   back: Retour
   show: Afficher les détails
   edit: Modifier
@@ -81,6 +94,7 @@ fr:
       title: "Voir l'évènement"
     edit:
       title: "Modifier l'évènement"
+      submit: "Enregistrer vos modifications"
     create_success: "Évènement créé avec succès"
     update_success: "Modifications enregistrées avec succès"
 #you can add user visible names for AR attribs here:

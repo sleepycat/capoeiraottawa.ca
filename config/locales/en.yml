@@ -8,6 +8,18 @@ en:
     format: '%l:%M %P'
     #for French use '%H:%M'
   daynames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+#This date setting is important for dealing with a Rails  bug
+#discussed here:
+#http://i18n.lighthouseapp.com/projects/14947/tickets/12-i18n-and-date_select-exception
+#
+  date:
+    formats: 
+      default: ""
+      long: ""
+      short: ""
+    order: [ :day, :month, :year ]
+
   back: Back
   show: Show
   edit: Edit
@@ -16,6 +28,7 @@ en:
   are_you_sure: Are you sure?
   home: Home
   submit: Submit
+  save_changes: "Save changes"
   gcsja:
     edit:
       title: Editing

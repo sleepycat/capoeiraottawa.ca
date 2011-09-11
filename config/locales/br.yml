@@ -7,15 +7,28 @@ br:
     title: Capoeira Angola em Ottawa
   time:
     format: '%l:%M %P'
-    #for French use '%H:%M'
-  daynames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  #FIXME - find where this is being used and point it to the day_names array below.
+  daynames: ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado']
+#This date setting is important for dealing with a Rails  bug
+#discussed here:
+#http://i18n.lighthouseapp.com/projects/14947/tickets/12-i18n-and-date_select-exception
+  date:
+    order: [ :year, :month, :day ]
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+    day_names: ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado']
+    #abbr_day_names: [S, P, A, T, K, Pn, Š] -- Find the BR version
+    month_names: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+   # abbr_month_names: [~, Sau, Vas, Kov, Bal, Geg, Bir, Lie, Rugs, Rugp, Spa, Lap, Gruo] --Find the BR version!
   back: Voltar
   show: Mostrar
   edit: Editar
   destroy: Apagar
   actions: Actions
-  are_you_sure: Você tem certeza?
-  home: Página inicial
+  are_you_sure: "Você tem certeza?"
+  home: "Página inicial"
   submit: Enviar
   gcsja:
     edit:
@@ -64,14 +77,14 @@ br:
       title: Editar localidade
     show:
       title: Localidade
-    confirm_destroy: Excluir este local e suas aulas?
-    created_success: Localização criado com sucesso.
-    update_success:  Localização atualizado com sucesso.
+    confirm_destroy: "Excluir este local e suas aulas?"
+    created_success: "Localização criado com sucesso."
+    update_success:  "Localização atualizado com sucesso."
   devise:
     sessions:
-      sign_in_link: Entrar
-      sign_up_link: Cadastre-se
-      sign_out_link: Sair
+      sign_in_link: "Entrar"
+      sign_up_link: "Cadastre-se"
+      sign_out_link: "Sair"
   events:
     index:
       title: Eventos
@@ -80,11 +93,12 @@ br:
       title: Nova Evento
       submit: Criar evento
     show:
-      title: Mostrando evento
+      title: "Mostrando evento"
     edit:
-    title: Edição evento
-    created_succcess: Evento criado com sucesso.
-    update_success: Evento atualizado com sucesso.
+      title: "Edição evento"
+      submit: "Atualizado evento" #XXX - I18n lazy lookup is picking up submit but not finding this...
+    created_succcess: "Evento criado com sucesso."
+    update_success: "Evento atualizado com sucesso."
 
 #you can add user visible names for AR attribs here:
   activerecord:
