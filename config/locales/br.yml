@@ -30,6 +30,10 @@ br:
   are_you_sure: "Você tem certeza?"
   home: "Página inicial"
   submit: Enviar
+#XXX- this is gross but fast. Fix it soon.
+  youtube_text: "Para outros vídeos com Mestre Jogo de Dentro, o Grupo de CapoeiraAngola Jogo de Semente fazer, e vários, por favor visitor nosso canal no <a href='www.youtube.com/user/stephensam'>YouTube</a>."
+
+
   gcsja:
     edit:
       title: Edição

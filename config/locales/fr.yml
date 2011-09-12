@@ -28,6 +28,9 @@ fr:
   are_you_sure: Êtes-vous certain?
   home: Accueil
   submit: Soumettre
+  #XXX - gross but fast. Fix it soon.
+  youtube_text: "Pour d’autres vidéos avec Mestre Jogo de Dentro, le Grupo de Capoeira Semente do Jogo de Angola, et divers, veuillez bien visiter notre chaîne <a href='www.youtube.com/user/stephensam'>YouTube</a>."
+
   gcsja:
     edit:
       title: Modifications
