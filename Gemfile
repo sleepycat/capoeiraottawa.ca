@@ -12,6 +12,7 @@ gem "geocoder"
 gem 'haml'
 gem 'paperclip', :git => "git://github.com/sleepycat/paperclip.git"
 gem 'pg'
+gem 'thin'
 
 group :assets do
   gem 'uglifier'
