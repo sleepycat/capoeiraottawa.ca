@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'downthetube', '0.0.8' #:path => "/home/mike/projects/downthetube"
+gem 'downthetube', '0.0.9'
 gem 'net-sftp'
 gem 'net-ssh'
 gem 'globalize3'
@@ -11,6 +11,7 @@ gem 'declarative_authorization'
 gem "geocoder"
 gem 'haml'
 gem 'paperclip', :git => "git://github.com/sleepycat/paperclip.git"
+gem 'pg'
 
 group :assets do
   gem 'uglifier'
@@ -18,9 +19,8 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'pg'
   gem 'rspec-rails'
-  gem 'capybara', :git => "git://github.com/jnicklas/capybara.git"
+  gem 'capybara'
   gem 'launchy'
   gem 'mongrel'
   gem 'ruby-debug'
