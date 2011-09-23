@@ -77,7 +77,7 @@ p {
 
 @font-face{
   font-family: impossibilium;
-  src: url('imposs_accents.ttf') format('truetype');
+  src: asset-url('imposs_accents.ttf', 'truetype');
 }
 
 #nav{
