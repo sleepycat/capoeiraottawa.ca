@@ -10,7 +10,7 @@ Angola::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.precompile += %w( locations.js videos.js )
+  config.assets.precompile += %w( locations.js videos.js *.ttf )
 
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
