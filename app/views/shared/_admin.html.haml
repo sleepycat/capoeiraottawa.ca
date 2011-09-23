@@ -1,4 +1,4 @@
--if anybody_signed_in?
+-if user_signed_in?
   %ul
     %li
       =link_to_unless_current t('practices.index.title'), practices_path if current_user.has_role? :admin 

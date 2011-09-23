@@ -1,3 +1,5 @@
+//= require jquery
+//= require_self
 
 var map_centre = new google.maps.LatLng(45.4205, -75.6989);
 var initialize = function(){
@@ -37,7 +39,7 @@ var initialize = function(){
     map.setCenter(map_centre);
     map.setZoom(14);
 
-    var image = new google.maps.MarkerImage('/images/gcsja.png',
+    var image = new google.maps.MarkerImage("<%= asset_path('gcsja.png') %>",
         // The size in pixels of the image
         new google.maps.Size(26, 32),
         // The origin of the image.
@@ -45,7 +47,7 @@ var initialize = function(){
         // The pixel value of the actual point of pointer.
         new google.maps.Point(13, 32));
 
-    var shadow = new google.maps.MarkerImage('/images/gcsja_shadow.png',
+    var shadow = new google.maps.MarkerImage("<%= asset_path('gcsja_shadow.png')%>",
         new google.maps.Size(37, 32),
         new google.maps.Point(0,0),
         new google.maps.Point(13, 32));

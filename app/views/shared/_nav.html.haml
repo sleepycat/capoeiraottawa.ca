@@ -13,7 +13,7 @@
       =link_to_unless_current t('nav.about'), gcsja_show_path(:attr => 'about')
 
 
-    -if anybody_signed_in?
+    -if user_signed_in?
       %li
         =link_to t('devise.sessions.sign_out_link'), destroy_user_session_path
     -else    
@@ -21,7 +21,7 @@
         =link_to t('devise.sessions.sign_in_link'), new_user_session_path
           
 
-  -if anybody_signed_in?
+  -if user_signed_in?
     -if current_user.has_role? :admin
       =render :partial => 'shared/admin'
 
