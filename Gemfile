@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'downthetube', '0.0.9'
+gem 'downthetube'
 gem 'net-sftp'
 gem 'net-ssh'
 gem 'globalize3'
-gem 'rails', '3.1'
+gem 'rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'declarative_authorization'
