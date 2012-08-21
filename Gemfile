@@ -13,6 +13,7 @@ gem 'haml'
 gem 'paperclip', :git => "git://github.com/sleepycat/paperclip.git"
 gem 'pg'
 gem 'thin'
+gem 'redis'
 
 group :assets do
   gem 'uglifier'
@@ -23,7 +24,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'mongrel'
-  gem 'ruby-debug'
 end
 
