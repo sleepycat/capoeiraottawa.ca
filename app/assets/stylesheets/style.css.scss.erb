@@ -1,5 +1,6 @@
 /*Jogos green: 00923f*/
 
+
 .edit_video{
   margin: 0.5em;
 }
@@ -159,45 +160,31 @@ div.field, div.actions {
 
 /* Footer styles */
 #footer {
-  clear:both;
-  float:left;
-  width:100%;
   text-align:center;
   border-top:1px solid #000;
 }
+
 #footer p {
   padding:10px;
   margin:0;
   font-size: 0.6em;
 }
 
-#content{
-  position:relative;
+#container{
+  margin-top:2em;
+  width: 960px;
+  margin-left:auto;
+  margin-right:auto;
 }
-
-#rightcol{
-  position:absolute;
-  top:0px;
-  right:0px;
-  width:170px;
-}
-
-#leftcol{
-   width:150px;
-   position:absolute;
-   top: 0px;
-
- }
 
 #main{
-  margin-left:200px;
-  margin-right:200px;
-  min-height: 450px;
+  padding: 2em;
 }
 
 body{
-  width: 980px;
-  margin-left: auto;
-  margin-right: auto;
+  background-image: url("<%= asset_path 'chamada.jpg' %>");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
