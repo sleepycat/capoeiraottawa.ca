@@ -1,12 +1,7 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 
   has_many :roles
 
-  
   after_create :assign_roles
 
   # Setup accessible (or protected) attributes for your model
@@ -23,5 +18,5 @@ class User < ActiveRecord::Base
 
   def has_role? role
     self.roles.collect{|r| r.title.to_sym}.include? role
-  end  
+  end
 end

@@ -1,16 +1,14 @@
 source 'http://rubygems.org'
 
+gem 'i18n', path: "~/projects/i18n"
 gem 'downthetube'
 gem 'net-sftp'
 gem 'net-ssh'
 gem 'globalize3'
 gem 'rails'
 gem 'jquery-rails'
-gem 'devise'
-gem 'declarative_authorization'
 gem "geocoder"
 gem 'haml'
-gem 'paperclip', :git => "git://github.com/sleepycat/paperclip.git"
 gem 'pg'
 gem 'thin'
 gem 'redis'
@@ -21,6 +19,8 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'rspec'
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'

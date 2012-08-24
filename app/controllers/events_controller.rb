@@ -1,7 +1,4 @@
 class EventsController < ApplicationController
-  
-  filter_access_to :new, :edit, :create, :destroy, :update
-#  downloads_files_for :event, :poster
 
   # GET /events
   # GET /events.xml

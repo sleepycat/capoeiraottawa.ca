@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  filter_access_to :new, :edit, :create, :destroy, :update
+
   respond_to :html, :json
 
   def index

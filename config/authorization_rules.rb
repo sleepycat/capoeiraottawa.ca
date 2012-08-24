@@ -14,7 +14,7 @@ authorization do
   end
 
   role :guest do
-    has_permission_on :events, :videos, :locations, :gcsjas, :to => [:show, :index]
+    has_permission_on :events, :pages, :videos, :locations, :gcsjas, :to => [:show, :index]
     has_permission_on :users, :to => [:create, :new, :update]
   end
 end

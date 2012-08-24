@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -103,8 +104,8 @@ ActiveRecord::Schema.define(:version => 20110713163401) do
   create_table "video_translations", :force => true do |t|
     t.integer  "video_id"
     t.string   "locale"
-    t.text     "description"
     t.string   "title"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

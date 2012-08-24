@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  filter_resource_access
+
   # GET /locations
   # GET /locations.xml
   def index

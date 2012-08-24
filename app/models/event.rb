@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
     }}
 
   #XXX -- gsub filenames before saving to remove blank spaces. Replace with %20. 
-  has_attached_file :poster, :storage => :sftp, :path => 'paperclipcache.com/capoeiraottawa.ca/:class/:style/:basename.:extension', :url => 'http://paperclipcache.com/capoeiraottawa.ca/:class/:style/:basename.:extension', :sftp_credentials => @sftp_credentials, :styles => { :medium => { :geometry => "596x596>"}, :thumb => { :geometry => "150x150>" }}
+  #has_attached_file :poster, :storage => :sftp, :path => 'paperclipcache.com/capoeiraottawa.ca/:class/:style/:basename.:extension', :url => 'http://paperclipcache.com/capoeiraottawa.ca/:class/:style/:basename.:extension', :sftp_credentials => @sftp_credentials, :styles => { :medium => { :geometry => "596x596>"}, :thumb => { :geometry => "150x150>" }}
 
   validates_presence_of :lng, :message => I18n.t('validations.event.empty_lat_lng')
 end

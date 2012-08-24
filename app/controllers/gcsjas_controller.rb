@@ -1,8 +1,5 @@
 class GcsjasController < ApplicationController
 
-  #we are breaking from the conventions here so filter_resource_access will not work:
-  filter_access_to :edit, :update
-
   def show
     @gcsja = Gcsja.first
     @attr = params[:attr]

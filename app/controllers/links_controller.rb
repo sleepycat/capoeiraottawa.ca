@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+
   # GET /links
   # GET /links.xml
   def index
