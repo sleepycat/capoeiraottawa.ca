@@ -11,7 +11,7 @@ gem "geocoder"
 gem 'haml'
 gem 'pg'
 gem 'thin'
-gem 'redis'
+gem 'omniauth'
 
 group :assets do
   gem 'uglifier'
@@ -19,6 +19,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'rspec'
   gem 'sqlite3'
   gem 'rspec-rails'

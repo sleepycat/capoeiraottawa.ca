@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110713163401) do
+ActiveRecord::Schema.define(:version => 20120905181323) do
 
   create_table "events", :force => true do |t|
     t.decimal  "lat"
@@ -66,6 +66,14 @@ ActiveRecord::Schema.define(:version => 20110713163401) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "practice_id"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "sort_order"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "practices", :force => true do |t|

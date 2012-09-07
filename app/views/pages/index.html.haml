@@ -1,0 +1,26 @@
+%h1
+  =t('pages.index.title')
+
+%table
+  %thead
+    %tr
+      %th
+        =t('activerecord.attributes.page.title')
+      %th
+        =t('activerecord.attributes.page.content')
+      %th
+        =t('activerecord.attributes.page.order')
+      %th{ :colspan => 3 }
+
+  %tbody
+    - for page in @pages
+      %tr{ :class => cycle(:odd, :even) }
+        %td= page.title
+        %td= page.content
+        %td= page.order
+        %td= link_to t('show'), page
+        %td= link_to t('edit'), edit_page_path(page)
+        %td= link_to t('destroy'), page, :confirm => I18n.t('confirm_delete'), :method => :delete
+
+%br
+= link_to t('page.new'), new_page_path

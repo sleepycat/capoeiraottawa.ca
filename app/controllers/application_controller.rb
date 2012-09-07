@@ -22,4 +22,5 @@ class ApplicationController < ActionController::Base
   def self.default_url_options
     { :locale => I18n.locale }
   end
+
 end

@@ -19,7 +19,6 @@ en:
       long: ""
       short: ""
     order: [ :day, :month, :year ]
-
   back: Back
   show: Show
   edit: Edit
@@ -67,6 +66,9 @@ en:
       title: Classes
     created_success: Class created successfully.
     updated_success: Class updated successfully.
+  pages:
+    new:
+      new: "Add a new page"
   locations:
     index:
       title: Locations
@@ -102,6 +104,10 @@ en:
 #you can add user visible names for AR attribs here:
   activerecord:
     attributes:
+      page:
+        title: "Title"
+        content: "Content"
+        sort_order: "Order"
       video:
         youtube_id: Youtube ID
         url: URL

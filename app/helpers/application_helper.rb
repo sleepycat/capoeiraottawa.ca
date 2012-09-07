@@ -1,9 +1,17 @@
 module ApplicationHelper
-  
 
-  def action_links_for obj, options = {} 
+  def pages_links
+    # XXX - clean this up.
+    links = []
+    Page.order('sort_order').each do |page|
+      links << link_to(page.title.capitalize, page_path(page.title)).html_safe
+    end
+    links.join('<li>').html_safe
+  end
+
+  def action_links_for obj, options = {}
     if current_user
-      content_tag :span, :class => "action_links" do 
+      content_tag :span, :class => "action_links" do
         content = ""
         content += link_to(t('show'), polymorphic_path(obj)) unless options[:show] == false
         content += link_to( t('edit'), edit_polymorphic_path(obj)) if current_user.has_role? :admin
@@ -12,7 +20,7 @@ module ApplicationHelper
       end
     end
   end
-  
+
   def language_switcher
     content_tag :span, :id => "language_switcher" do
       links = ""

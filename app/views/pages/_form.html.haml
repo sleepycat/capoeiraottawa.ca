@@ -1,0 +1,18 @@
+= form_for @page do |f|
+  - if @page.errors.any?
+    #errorExplanation
+      %h2= t('activerecord.errors.messages.page.invalid_record')
+      %ul
+      - @page.errors.full_messages.each do |msg|
+        %li= msg
+  %span.field
+    == #{f.label :title}:  #{f.text_field :title}
+  %span.field
+    == #{f.label :sort_order}: #{f.number_field :sort_order}
+  .field
+    = f.label :content
+    %br
+    = f.text_area :content
+
+  .actions
+    = f.submit I18n.t('submit')

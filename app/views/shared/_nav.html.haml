@@ -1,9 +1,9 @@
 %div{ id: 'nav'}
   %ul
     %li
-      =link_to_unless_current t('locations.index.title'), locations_path
+      =pages_links
     %li
-      =link_to_unless_current t('events.index.title'), events_path
+      =link_to_unless_current t('locations.index.title'), locations_path
     %li
       =link_to_unless_current t('videos.index.title'), videos_path
 

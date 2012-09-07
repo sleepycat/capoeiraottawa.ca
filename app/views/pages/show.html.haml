@@ -1,2 +1,5 @@
+== #{ link_to t('edit'), edit_page_path(@page) }
 %p
-  = @page["content"]
+  = @page.title
+%p
+  = @page.content
