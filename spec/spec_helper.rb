@@ -4,7 +4,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
-require 'redis'
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -37,11 +36,4 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
-  Redis.current = Redis.new(db: 13)
-
-  RSpec.configure do |c|
-    c.before :each do
-      Redis.current.flushdb
-    end
-  end
 end
