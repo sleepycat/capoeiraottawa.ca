@@ -31,9 +31,6 @@ fr:
   #XXX - gross but fast. Fix it soon.
   youtube_text: "Pour d’autres vidéos avec Mestre Jogo de Dentro, le Grupo de Capoeira Semente do Jogo de Angola, et divers, veuillez bien visiter notre chaîne <a href='http://www.youtube.com/user/stephensam'>YouTube</a>."
 
-  gcsja:
-    edit:
-      title: Modifications
   successfully_updated: Modifications enregistrées
   videos:
     index:
@@ -112,13 +109,8 @@ fr:
         uploader: Uploader #Nom de la personne qui a initialement téléchargé la vidéo sur YouTube
       event:
         lng: ''
-      gcsja:
-        about: À propos
-        welcome: Bienvenue
     errors:
       messages:
-        gcsja:
-          invalid_record: Erreur!
 #Validation messages
   validations:
     event:
