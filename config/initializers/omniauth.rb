@@ -1,5 +1,4 @@
-#TODO add providers here.
-#
-#Rails.application.config.middleware.use OmniAuth::Builder do
-# provider :twitter, :blah, :blah
-#end
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :developer unless Rails.env.production?
+  provider :twitter, ENV['TWITTER_KEY'], ENV["TWITTER_SECRET"]
+end

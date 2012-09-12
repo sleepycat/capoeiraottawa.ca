@@ -1,6 +1,10 @@
 Angola::Application.routes.draw do
 
+  get "auth/:provider/callback", to: "sessions#create"
+
   scope ":locale", :locale => /en|br|fr/ do
+    get "login", to: "sessions#index", as: :login
+    delete "logout", to: "sessions#destroy", as: :logout
     resources :videos, :practices, :locations
     resources :pages, except: [:show, :edit, :update, :new]
     get "pages/new", to: "pages#new", as: :new_page

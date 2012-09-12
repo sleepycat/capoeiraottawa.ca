@@ -1,0 +1,218 @@
+provider: twitter
+uid: "14299100"
+info: !map:OmniAuth::AuthHash::InfoHash 
+  nickname: dexterchief
+  name: dexterchief
+  location: ""
+  image: http://a0.twimg.com/sticky/default_profile_images/default_profile_4_normal.png
+  description: ""
+  urls: !map:Hashie::Mash 
+    Website: 
+    Twitter: http://twitter.com/dexterchief
+credentials: !map:Hashie::Mash 
+  token: 14299100-mmoJ6J0Y9NGOuO871nuZfddS9Dwi7p71CadFds5Ll
+  secret: wUMP1QBRr9wTV3BOco2gJDRPZyTTukd4qVch0fu2Q
+extra: !map:Hashie::Mash 
+  access_token: !ruby/object:OAuth::AccessToken 
+    consumer: !ruby/object:OAuth::Consumer 
+      http: !ruby/object:Net::HTTP 
+        address: api.twitter.com
+        ca_file: /etc/ssl/certs/ca-certificates.crt
+        ca_path: 
+        cert: 
+        cert_store: 
+        ciphers: 
+        close_on_empty_response: false
+        compression: 
+        continue_timeout: 
+        curr_http_version: "1.1"
+        debug_output: 
+        enable_post_connection_check: true
+        key: 
+        no_keepalive_server: false
+        open_timeout: 30
+        port: 443
+        read_timeout: 30
+        socket: 
+        ssl_context: !ruby/object:OpenSSL::SSL::SSLContext 
+          ca_file: /etc/ssl/certs/ca-certificates.crt
+          ca_path: 
+          cert: 
+          cert_store: 
+          client_ca: 
+          client_cert_cb: 
+          extra_chain_cert: 
+          key: 
+          options: -2147480577
+          servername_cb: 
+          session_get_cb: 
+          session_id_context: 
+          session_new_cb: 
+          session_remove_cb: 
+          timeout: 
+          tmp_dh_callback: 
+          verify_callback: 
+          verify_depth: 5
+          verify_mode: 1
+        ssl_timeout: 
+        ssl_version: 
+        sspi_enabled: false
+        started: false
+        use_ssl: true
+        verify_callback: 
+        verify_depth: 5
+        verify_mode: 1
+      http_method: :post
+      key: S5KzakgnX781cR9Ou7zkGQ
+      options: 
+        :signature_method: HMAC-SHA1
+        :request_token_path: /oauth/request_token
+        :authorize_path: /oauth/authenticate
+        :access_token_path: /oauth/access_token
+        :proxy: 
+        :scheme: :header
+        :http_method: :post
+        :oauth_version: "1.0"
+        :site: https://api.twitter.com
+      secret: j2ChNJzqhaMLviPYoewIlmWnK5x6v4K0WLJ0kFpOJE8
+      uri: !ruby/object:URI::HTTPS 
+        fragment: 
+        host: api.twitter.com
+        opaque: 
+        parser: 
+        password: 
+        path: ""
+        port: 443
+        query: 
+        registry: 
+        scheme: https
+        user: 
+    params: 
+      :oauth_token: 14299100-mmoJ6J0Y9NGOuO871nuZfddS9Dwi7p71CadFds5Ll
+      oauth_token: 14299100-mmoJ6J0Y9NGOuO871nuZfddS9Dwi7p71CadFds5Ll
+      :oauth_token_secret: wUMP1QBRr9wTV3BOco2gJDRPZyTTukd4qVch0fu2Q
+      oauth_token_secret: wUMP1QBRr9wTV3BOco2gJDRPZyTTukd4qVch0fu2Q
+      :user_id: "14299100"
+      user_id: "14299100"
+      :screen_name: dexterchief
+      screen_name: dexterchief
+    response: !ruby/object:Net::HTTPOK 
+      body: "{\"id\":14299100,\"favourites_count\":0,\"profile_image_url\":\"http:\\/\\/a0.twimg.com\\/sticky\\/default_profile_images\\/default_profile_4_normal.png\",\"profile_background_tile\":false,\"profile_sidebar_fill_color\":\"DDEEF6\",\"verified\":false,\"location\":\"\",\"utc_offset\":-18000,\"name\":\"dexterchief\",\"lang\":\"en\",\"is_translator\":false,\"default_profile\":true,\"profile_background_color\":\"C0DEED\",\"protected\":false,\"contributors_enabled\":false,\"time_zone\":\"Quito\",\"profile_background_image_url\":\"http:\\/\\/a0.twimg.com\\/images\\/themes\\/theme1\\/bg.png\",\"profile_link_color\":\"0084B4\",\"description\":\"\",\"geo_enabled\":false,\"listed_count\":0,\"show_all_inline_media\":false,\"notifications\":false,\"id_str\":\"14299100\",\"statuses_count\":6,\"profile_image_url_https\":\"https:\\/\\/si0.twimg.com\\/sticky\\/default_profile_images\\/default_profile_4_normal.png\",\"following\":false,\"profile_use_background_image\":true,\"screen_name\":\"dexterchief\",\"profile_background_image_url_https\":\"https:\\/\\/si0.twimg.com\\/images\\/themes\\/theme1\\/bg.png\",\"followers_count\":6,\"profile_text_color\":\"333333\",\"follow_request_sent\":false,\"friends_count\":2,\"url\":null,\"status\":{\"place\":null,\"favorited\":false,\"in_reply_to_status_id_str\":null,\"coordinates\":null,\"retweet_count\":1,\"in_reply_to_user_id_str\":null,\"truncated\":false,\"geo\":null,\"in_reply_to_user_id\":null,\"in_reply_to_screen_name\":null,\"id_str\":\"783571993\",\"retweeted\":false,\"contributors\":null,\"source\":\"web\",\"in_reply_to_status_id\":null,\"id\":783571993,\"created_at\":\"Sat Apr 05 21:15:12 +0000 2008\",\"text\":\"is groggy after his nap.\"},\"created_at\":\"Fri Apr 04 02:28:52 +0000 2008\",\"default_profile_image\":true,\"profile_sidebar_border_color\":\"C0DEED\"}"
+      body_exist: true
+      code: "200"
+      header: 
+        date: 
+        - Tue, 11 Sep 2012 23:19:29 GMT
+        status: 
+        - 200 OK
+        etag: 
+        - "\"f78a0a8b61a851e903b3ce8893953341\""
+        content-type: 
+        - application/json; charset=utf-8
+        cache-control: 
+        - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+        x-runtime: 
+        - "0.04875"
+        content-length: 
+        - "1647"
+        x-transaction: 
+        - b75c8827864febc2
+        x-frame-options: 
+        - SAMEORIGIN
+        expires: 
+        - Tue, 31 Mar 1981 05:00:00 GMT
+        x-mid: 
+        - 05b9344c9453b9a91647d34802219c78818fda5a
+        x-ratelimit-class: 
+        - api_identified
+        x-transaction-mask: 
+        - a6183ffa5f8ca943ff1b53b5644ef1141772db9a
+        x-access-level: 
+        - read
+        x-ratelimit-reset: 
+        - "1347408881"
+        last-modified: 
+        - Tue, 11 Sep 2012 23:19:29 GMT
+        x-ratelimit-limit: 
+        - "350"
+        x-ratelimit-remaining: 
+        - "348"
+        pragma: 
+        - no-cache
+        set-cookie: 
+        - k=10.36.37.105.1347405569322416; path=/; expires=Tue, 18-Sep-12 23:19:29 GMT; domain=.twitter.com
+        - guest_id=v1%3A134740556932783016; domain=.twitter.com; path=/; expires=Fri, 12-Sep-2014 11:19:29 GMT
+        - dnt=; domain=.twitter.com; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT
+        - lang=en; path=/
+        - lang=en; path=/
+        - lang=en; path=/
+        - twid=u%3D14299100%7CAX7iAPkRP1lpfROB35RPRUmiroo%3D; domain=.twitter.com; path=/; secure
+        - _twitter_sess=BAh7CSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCD5dobc5AToHaWQiJTEy%250AMWM5MzUzNjUwMmYyMzU0OGIyM2VhNWI1MjUxYTI0Ogxjc3JmX2lkIiVmYmE4%250AMDRiYjVjYWRkOGU1MWQzMThiMTEyODBkZjY3OA%253D%253D--fe60d591647c2f6016dfd0c522cb60d1aca0beff; domain=.twitter.com; path=/; HttpOnly
+        vary: 
+        - Accept-Encoding
+        server: 
+        - tfe
+      http_version: "1.1"
+      message: OK
+      read: true
+      socket: 
+    secret: wUMP1QBRr9wTV3BOco2gJDRPZyTTukd4qVch0fu2Q
+    token: 14299100-mmoJ6J0Y9NGOuO871nuZfddS9Dwi7p71CadFds5Ll
+  raw_info: !map:Hashie::Mash 
+    id: 14299100
+    favourites_count: 0
+    profile_image_url: http://a0.twimg.com/sticky/default_profile_images/default_profile_4_normal.png
+    profile_background_tile: false
+    profile_sidebar_fill_color: DDEEF6
+    verified: false
+    location: ""
+    utc_offset: -18000
+    name: dexterchief
+    lang: en
+    is_translator: false
+    default_profile: true
+    profile_background_color: C0DEED
+    protected: false
+    contributors_enabled: false
+    time_zone: Quito
+    profile_background_image_url: http://a0.twimg.com/images/themes/theme1/bg.png
+    profile_link_color: 0084B4
+    description: ""
+    geo_enabled: false
+    listed_count: 0
+    show_all_inline_media: false
+    notifications: false
+    id_str: "14299100"
+    statuses_count: 6
+    profile_image_url_https: https://si0.twimg.com/sticky/default_profile_images/default_profile_4_normal.png
+    following: false
+    profile_use_background_image: true
+    screen_name: dexterchief
+    profile_background_image_url_https: https://si0.twimg.com/images/themes/theme1/bg.png
+    followers_count: 6
+    profile_text_color: "333333"
+    follow_request_sent: false
+    friends_count: 2
+    url: 
+    status: !map:Hashie::Mash 
+      place: 
+      favorited: false
+      in_reply_to_status_id_str: 
+      coordinates: 
+      retweet_count: 1
+      in_reply_to_user_id_str: 
+      truncated: false
+      geo: 
+      in_reply_to_user_id: 
+      in_reply_to_screen_name: 
+      id_str: "783571993"
+      retweeted: false
+      contributors: 
+      source: web
+      in_reply_to_status_id: 
+      id: 783571993
+      created_at: Sat Apr 05 21:15:12 +0000 2008
+      text: is groggy after his nap.
+    created_at: Fri Apr 04 02:28:52 +0000 2008
+    default_profile_image: true
+    profile_sidebar_border_color: C0DEED

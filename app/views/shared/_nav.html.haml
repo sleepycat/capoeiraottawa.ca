@@ -6,6 +6,9 @@
       =link_to_unless_current t('locations.index.title'), locations_path
     %li
       =link_to_unless_current t('videos.index.title'), videos_path
+    -if current_user
+      %li
+        =button_to t('nav.logout'), logout_path, method: :delete
 
 
   =language_switcher

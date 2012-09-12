@@ -11,7 +11,7 @@ gem "geocoder"
 gem 'haml'
 gem 'pg'
 gem 'thin'
-gem 'omniauth'
+gem 'omniauth-twitter'
 
 group :assets do
   gem 'uglifier'

@@ -10,7 +10,7 @@ class PagesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show, locale: "en"
+    get :show, locale: "en", page: "foo"
     assert_not_nil assigns(:page)
   end
 end

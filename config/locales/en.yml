@@ -2,6 +2,7 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 #
 en:
+  sign_in_with: "Sign in using your existing account with one of the following:"
   application:
     title: Capoeira Angola Ottawa
   time:
@@ -25,7 +26,6 @@ en:
   destroy: Delete
   actions: Actions
   are_you_sure: Are you sure?
-  home: Home
   submit: Submit
   #XXX - Gross but fast. Fix it soon.
   youtube_text: "Please visit our <a href='http://www.youtube.com/user/stephensam'>YouTube channel</a> for more videos with Mestre Jogo de Dentro, Grupo de Capoeira Semente do Jogo de Angola and other related capoeira angola videos."
@@ -45,11 +45,7 @@ en:
     form:
       enter_video_id: "Enter the Youtube ID of the video"
   nav:
-    about: About 
-    home: Home
-  admin:
-    edit_about: Edit about
-    edit_welcome: Edit welcome
+    logout: "logout"
   practices:
     index:
       title: Classes
@@ -72,7 +68,7 @@ en:
   locations:
     index:
       title: Locations
-      new_location: New Location  
+      new_location: "New Location"
     new:
       new: New location
       title: New Location
@@ -80,14 +76,9 @@ en:
       title: Editing Location
     show:
       title: Location
-    confirm_destroy: Delete this location and its classes?  
-    created_success: Location successfully created.
-    update_success: Location updated successfully.
-  devise:
-    sessions:
-      sign_in_link: Sign In
-      sign_up_link: Sign Up
-      sign_out_link: Sign Out
+    confirm_destroy: "Delete this location and its classes?"
+    created_success: "Location successfully created."
+    update_success: "Location updated successfully."
   events:
     index:
       title: Events
