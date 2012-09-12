@@ -47,14 +47,11 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(params[:page])
 
-    respond_to do |format|
-      if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
-        format.json { render json: @page, status: :created, location: @page }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @page.errors, status: :unprocessable_entity }
-      end
+    if @page.save
+      flash[:info]= t('pages.create.success')
+      redirect_to action: "show", page: @page.title
+    else
+      render action: "new"
     end
   end
 

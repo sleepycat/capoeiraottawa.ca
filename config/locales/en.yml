@@ -63,6 +63,8 @@ en:
   pages:
     new:
       new: "Add a new page"
+    create:
+      success: "This page has been saved successfully."
   locations:
     index:
       title: Locations
