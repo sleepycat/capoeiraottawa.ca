@@ -2,6 +2,7 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 #
 en:
+  delete: "Delete"
   sign_in_with: "Sign in using your existing account with one of the following:"
   application:
     title: Capoeira Angola Ottawa
