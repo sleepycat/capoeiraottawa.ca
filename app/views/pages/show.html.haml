@@ -1,3 +1,4 @@
-== #{ link_to t('edit'), edit_page_path(@page) } #{ button_to(t('delete'), page_path(@page), method: :delete, confirm: "Are you sure?")}
+=#TODO - get the confirm option working here.
+== #{ link_to t('edit'), edit_page_path(@page), {class: "action_link"} } #{ button_to(t('delete'), {controller: "pages", action: "destroy", page: @page.title, confirm: "Are you sure?"}, {method: :delete, class: "destroy_button action_link"})}
 %p
   = @page.content.html_safe

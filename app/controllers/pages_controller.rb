@@ -77,10 +77,7 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find_by_title(params[:page])
     @page.destroy
-
-    respond_to do |format|
-      format.html { redirect_to pages_url }
-      format.json { head :no_content }
-    end
+    flash[:notice]= t('pages.deletion_success')
+    redirect_to pages_url
   end
 end
