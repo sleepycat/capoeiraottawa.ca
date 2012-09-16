@@ -43,8 +43,7 @@ fr:
     form:
       enter_video_id: "Entrer l'ID YouTube de cette vidéo"
   nav:
-    about: À propos
-    home: Accueil
+    logout: "logout"
   admin:
     edit_about: "Modifier l'onglet À propos"
     edit_welcome: "Modifier l'onglet Accueil"

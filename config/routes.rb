@@ -12,7 +12,7 @@ Angola::Application.routes.draw do
     get ":page/edit", to: "pages#edit", as: :edit_page
     get ":page", to: "pages#show", as: :page
     delete ":page", to: "pages#destroy", as: :page
-    get "", to: "pages#index"
+    get "", to: "pages#index", as: :index_page
 
   end
 

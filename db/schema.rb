@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120913010701) do
+ActiveRecord::Schema.define(:version => 20120916133529) do
 
   create_table "authentications", :force => true do |t|
     t.string   "uid"
@@ -116,6 +116,10 @@ ActiveRecord::Schema.define(:version => 20120913010701) do
     t.string   "email",      :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "nickname"
+    t.text     "image"
+    t.string   "website"
   end
 
   create_table "video_translations", :force => true do |t|

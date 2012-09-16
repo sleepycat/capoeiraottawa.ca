@@ -6,7 +6,7 @@
       =link_to_unless_current t('locations.index.title'), locations_path, {class: "nav_link"}
     %li
       =link_to_unless_current t('videos.index.title'), videos_path, {class: "nav_link"}
-    -if current_user
+    -if session[:user_id]
       %li
         =button_to t('nav.logout').capitalize, {controller: "sessions", action: "destroy"}, {class: "nav_link destroy_button", method: :delete}
 

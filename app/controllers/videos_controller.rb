@@ -1,24 +1,25 @@
 class VideosController < ApplicationController
 
+  before_filter :authorize, except: [:index, :show]
   respond_to :html, :json
 
   def index
     @videos = Video.order('created_at desc')
     respond_with @videos
   end
-  
+
   def update
     @video = Video.find params[:id]
     if @video.update_attributes params[:video]
-      flash[:notice]= t('videos.update_success') 
+      flash[:notice]= t('videos.update_success')
       respond_with @video, :location => videos_path
     else
-      flash[:notice]= t('videos.update_failed') 
-      respond_with @video 
+      flash[:notice]= t('videos.update_failed')
+      respond_with @video
     end
   end
 
-  def show 
+  def show
     @video = Video.find params[:id]
     respond_with @video
   end
@@ -27,7 +28,7 @@ class VideosController < ApplicationController
     @video = Video.new
     respond_to do |format|
       format.html
-      format.json do 
+      format.json do
         @video = Youtube::Video.new params[:youtube_id]
         render :json => @video.to_h.to_json
       end

@@ -4,7 +4,7 @@ module ApplicationHelper
     # XXX - clean this up.
     links = []
     Page.order('sort_order').each do |page|
-      links << link_to_unless_current(page.title.capitalize, page_path(page.title), {class: "nav_link"}).html_safe
+      links << link_to_unless_current(page.title.try(:capitalize), page_path(page.title), {class: "nav_link"}).html_safe
     end
     links.join('<li>').html_safe
   end

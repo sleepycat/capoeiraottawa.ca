@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
 
-  # GET /locations
-  # GET /locations.xml
+  before_filter :authorize, except: [:index, :show]
+
   def index
     @locations = Location.all
     @locations.each{|loc| loc.practices}
@@ -12,22 +12,18 @@ class LocationsController < ApplicationController
     end
   end
 
-  # GET /locations/1
-  # GET /locations/1.xml
   def show
     @location = Location.find(params[:id])
 
     respond_to do |format|
-      format.html do 
+      format.html do
         @location.practices
-        render :partial => 'show', :layout => false 
+        render :partial => 'show', :layout => false
       end
       format.xml  { render :xml => @location }
     end
   end
 
-  # GET /locations/new
-  # GET /locations/new.xml
   def new
     @location = Location.new
 
@@ -37,13 +33,10 @@ class LocationsController < ApplicationController
     end
   end
 
-  # GET /locations/1/edit
   def edit
     @location = Location.find(params[:id])
   end
 
-  # POST /locations
-  # POST /locations.xml
   def create
     @location = Location.new(params[:location])
 
@@ -58,8 +51,6 @@ class LocationsController < ApplicationController
     end
   end
 
-  # PUT /locations/1
-  # PUT /locations/1.xml
   def update
     @location = Location.find(params[:id])
 
@@ -74,8 +65,6 @@ class LocationsController < ApplicationController
     end
   end
 
-  # DELETE /locations/1
-  # DELETE /locations/1.xml
   def destroy
     @location = Location.find(params[:id])
     @location.destroy
@@ -85,4 +74,5 @@ class LocationsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

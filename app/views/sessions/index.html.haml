@@ -1,7 +1,7 @@
 %h3
   =t("sign_in_with")
 %p
-  -if current_user
-    ==#{t('signed_in_as')} current_user
+  -if session[:user_id]
+    ==#{t('signed_in_as')} #{ current_user }
   -else
     =link_to image_tag("twitter_32.png"), "/auth/twitter"

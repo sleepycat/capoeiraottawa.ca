@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_filter :authorize, except: [:index, :show]
+
   def index
     @page = Page.order('sort_order asc').first
     if @page.nil?
@@ -38,7 +40,6 @@ class PagesController < ApplicationController
   end
 
   def update
-    puts params.inspect
     @page = Page.find_by_title(params[:page_title])
 
     if @page.update_attributes(params[:page])
@@ -52,7 +53,7 @@ class PagesController < ApplicationController
     @page = Page.find_by_title(params[:page])
     @page.destroy
     flash[:notice]= t('pages.deletion_success')
-    redirect_to locale: I18n.locale, controller: "pages", action: "index"
+    redirect_to index_page_path
   end
 
 end
