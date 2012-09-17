@@ -1,3 +1,4 @@
-=action_links if current_user && current_user.has_role?(:admin)
+-if admin_user?
+  =action_links
 %p
   = @page.content.html_safe

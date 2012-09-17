@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :set_locale
-  helper_method :current_user
+  helper_method :current_user, :admin_user?
 
   def set_locale
 #    if  I18n.available_locales.include? params[:locale].to_sym
@@ -28,7 +28,12 @@ class ApplicationController < ActionController::Base
     @current_user =  session[:user_id] ? User.find(session[:user_id]) : nil
   end
 
+  def admin_user?
+    current_user.nil? ? false : current_user.has_role?(:admin)
+  end
+
+
   def authorize
-    redirect_to login_path, alert: t("not_authorized") unless current_user && current_user.has_role?(:admin)
+    redirect_to login_path, alert: t("not_authorized") unless admin_user?
   end
 end

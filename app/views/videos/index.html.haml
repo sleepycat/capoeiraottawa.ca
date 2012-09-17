@@ -1,3 +1,7 @@
+-if admin_user?
+  .action_links
+    =link_to t('videos.new'), new_video_path
+
 =render :partial => 'video', :collection => @videos
 %p
   =raw t('youtube_text')

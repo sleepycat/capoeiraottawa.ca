@@ -1,3 +1,5 @@
-
-=javascript_include_tag 'locations'
+-if admin_user?
+  .action_links
+    =link_to t('location.new'), new_location_path
 #map_canvas
+=javascript_include_tag 'locations'
