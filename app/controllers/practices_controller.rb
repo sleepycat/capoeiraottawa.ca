@@ -1,5 +1,7 @@
 class PracticesController < ApplicationController
 
+  before_filter :authorize, except: [:index, :show]
+
   # GET /practices
   # GET /practices.xml
   def index
