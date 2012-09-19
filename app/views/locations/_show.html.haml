@@ -1,23 +1,17 @@
 #infowindow_content
   .infowindow_actions
     %ul
-      -permitted_to? :edit, @location  do
+      -if admin_user?
         %li
           = link_to t('edit'), edit_location_path(@location), :target => '_parent'
-      -permitted_to? :destroy, @location do
         %li
           =link_to t('destroy'), @location, :confirm => I18n.t('locations.confirm_destroy'), :method => :delete
 
 
   =content_tag_for :div, @location do
     %p
-      =render :partial => 'practice', :collection => @location.practices
-    %p
       =@location.name
+    %p
       = @location.address
-      
-
-
-
-
-  
+    %p
+      =render :partial => 'practice', :collection => @location.practices
