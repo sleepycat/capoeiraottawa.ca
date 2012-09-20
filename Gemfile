@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'i18n', path: "~/projects/i18n"
 gem 'downthetube'
 gem 'net-sftp'
 gem 'net-ssh'
