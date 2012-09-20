@@ -23,6 +23,7 @@ fr:
   back: Retour
   show: Afficher les détails
   edit: Modifier
+  new: "Nouveau"
   destroy: Supprimer
   actions: Actions
   are_you_sure: Êtes-vous certain?
