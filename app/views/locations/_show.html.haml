@@ -9,9 +9,9 @@
 
 
   =content_tag_for :div, @location do
-    %p
+    %p.location_title
       =@location.name
-    %p
+    %p.location_address
       = @location.address
-    %p
+    %p.location_practice_times
       =render :partial => 'practice', :collection => @location.practices
