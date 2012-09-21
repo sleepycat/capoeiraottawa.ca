@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # FIXME - XXX this is a mess. The models are probably doing the wrong thing.
     auth = env["omniauth.auth"]
     authentication = Authentication.find_by_provider_and_uid(auth["provider"], auth["uid"])
     user = authentication ? authentication.user : User.from_omniauth(auth)

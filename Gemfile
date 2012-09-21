@@ -11,6 +11,7 @@ gem 'haml'
 gem 'pg'
 gem 'thin'
 gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
 
 group :assets do
   gem 'uglifier'

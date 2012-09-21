@@ -1,6 +1,8 @@
 Angola::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  OmniAuth.config.full_host = "http://capoeiraottawa.ca"
+
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
