@@ -4,15 +4,15 @@
 var map_centre = new google.maps.LatLng(45.4205, -75.6989);
 var initialize = function(){
     $('.notice').delay(2000).fadeOut(2000);
-    
+
     var markers = [];
-    var infowindow = new google.maps.InfoWindow();
-  
+    var infowindow = new google.maps.InfoWindow({maxWidth: 400});
+
     function load_content(marker, id){
         $.ajax({
             url: 'locations/' + id,
             success: function(data){
-                infowindow.setContent(data);
+              infowindow.setContent(data);
                 infowindow.open(map, marker);
             }
         });
