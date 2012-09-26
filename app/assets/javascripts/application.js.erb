@@ -1,0 +1,8 @@
+//= require jquery
+//= require jquery.anystretch.min
+//= require rails
+//y require_self
+$.anystretch("<%= asset_path 'capoeira36.jpg' %>", {speed: 150});
+$(document).ready(function(){
+  $('.notice').delay(2000).fadeOut(2000);
+});
