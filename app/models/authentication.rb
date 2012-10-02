@@ -4,11 +4,16 @@ class Authentication < ActiveRecord::Base
   #ensure that the combination of uid and provider is unique
   validates_uniqueness_of :uid, scope: :provider
 
+  def self.find_with_omniauth(auth)
+    find_by_provider_and_uid(auth["provider"], auth["uid"])
+  end
 
-  def self.from_omniauth(auth)
-    create do |authentication|
+  def self.create_from_omniauth(auth)
+    user = User.create_from_omniauth(auth)
+    create! do |authentication|
       authentication.uid = auth["uid"]
       authentication.provider = auth["provider"]
+      authentication.user = user
     end
   end
 

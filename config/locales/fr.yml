@@ -2,6 +2,8 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 #
 fr:
+  not_authorized: "You are not authorized to take that action."
+  logged_in: "Se connecter"
   application:
     title: Capoeira Angola à Ottawa
   time:
@@ -111,6 +113,7 @@ fr:
         lng: ''
     errors:
       messages:
+        record_invalid: "This record is invalid"
 #Validation messages
   validations:
     event:

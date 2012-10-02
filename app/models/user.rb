@@ -21,14 +21,11 @@ class User < ActiveRecord::Base
     self.roles.collect{|r| r.title.to_sym}.include? role
   end
 
-  def self.from_omniauth(auth)
-    create do |user|
-      user.name = auth["info"]["name"] if auth["info"]["name"]
-      user.nickname = auth["info"]["nickname"] if auth["info"]["nickname"]
-      user.image = auth["info"]["image"] if auth["info"]["image"]
-      user.website = auth["urls"]["website"] if auth["urls"]["website"]
-      user.email = auth["info"]["email"] if auth["urls"]["email"]
-      user.authentications << Authentication.from_omniauth(auth)
+  def self.create_from_omniauth(auth)
+      create! do |user|
+        user.name = auth["info"]["name"]
+        user.email = auth["info"]["email"] if auth["info"]["email"]
     end
   end
+
 end

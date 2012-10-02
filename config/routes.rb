@@ -1,6 +1,6 @@
 Angola::Application.routes.draw do
 
-  get "auth/:provider/callback", to: "sessions#create"
+  get "auth/:provider/callback", to: "sessions#create", as: :new_session
 
   scope ":locale", :locale => /en|br|fr/ do
     get "login", to: "sessions#index", as: :login

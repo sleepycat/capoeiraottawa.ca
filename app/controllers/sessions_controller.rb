@@ -5,12 +5,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    auth = env["omniauth.auth"]
-    authentication = Authentication.find_by_provider_and_uid(auth["provider"], auth["uid"])
-    user = authentication ? authentication.user : User.from_omniauth(auth)
-    session[:user_id] = user.id
-    flash[:notice]= t("logged_in")
-    redirect_to root_url
+    auth = request.env["omniauth.auth"]
+    authentication = Authentication.find_with_omniauth(auth)
+    if authentication
+      #there is a user for this auth; let them in
+      user = authentication.user
+    else
+      authentication = Authentication.create_from_omniauth(auth)
+      user = authentication.user
+    end
+      session[:user_id] = user.id
+      flash[:notice]= t("logged_in")
+      redirect_to root_url
   end
 
   def destroy

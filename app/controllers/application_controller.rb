@@ -11,15 +11,6 @@ class ApplicationController < ActionController::Base
 #    end
   end
 
-  def events
-    @events = Event.order('start_date desc').limit(2)
-  end
-
-  def locations
-    @locations = Location.all
-    @locations.each{|loc| loc.practices}
-  end
-
   def self.default_url_options
     { :locale => I18n.locale }
   end
@@ -34,6 +25,6 @@ class ApplicationController < ActionController::Base
 
 
   def authorize
-    redirect_to login_path, alert: t("not_authorized") unless admin_user?
+    redirect_to login_path, notice: t("not_authorized") unless admin_user?
   end
 end

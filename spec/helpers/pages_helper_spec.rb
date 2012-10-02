@@ -11,5 +11,5 @@ require 'spec_helper'
 #   end
 # end
 describe PagesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should write an set of links ordered by sort_order"
 end

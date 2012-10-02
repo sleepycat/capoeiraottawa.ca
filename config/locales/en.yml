@@ -2,6 +2,8 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 #
 en:
+  not_authorized: "You are not authorized to take that action."
+  logged_in: "You have been logged in"
   sign_in_with: "Sign in using your existing account with one of the following:"
   application:
     title: Capoeira Angola Ottawa
@@ -110,6 +112,7 @@ en:
         lng: ''
     errors:
       messages:
+        record_invalid: "This record is invalid"
 #Validation messages
   validations:
     event:

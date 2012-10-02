@@ -23,7 +23,11 @@ group :development, :test do
   gem 'rspec'
   gem 'sqlite3'
   gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'webmock'
   gem 'capybara'
   gem 'launchy'
 end
-

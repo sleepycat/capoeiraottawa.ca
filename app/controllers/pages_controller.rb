@@ -4,11 +4,9 @@ class PagesController < ApplicationController
 
   def index
     @page = Page.order('sort_order asc').first
-    if @page.nil?
-      @page = Page.create(title: "change_me",
+    @page ||= Page.create(title: "change_me",
                           content: "Replace this content with your own.",
                           sort_order: 0)
-    end
     render action: :show
   end
 
