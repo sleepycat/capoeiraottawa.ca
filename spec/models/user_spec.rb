@@ -20,12 +20,21 @@ describe User do
     OmniAuth.config.mock_auth[:google]
   end
 
-  it "should create new users based on an omniauth hash" do
-    user = User.create_from_omniauth(valid_twitter_omniauth)
+  let(:user){ User.create_from_omniauth(valid_twitter_omniauth) }
+
+  it "creates a new user based on an omniauth hash" do
     user.should_not be_nil
+  end
+
+  it "populates user attributes with the data in the hash" do
     user.name.should eq("dexterchief")
+  end
+
+  it "assigns the guest role by default" do
     user.has_role?(:admin).should be_false
     user.has_role?(:guest).should be_true
   end
+
+
 
 end
