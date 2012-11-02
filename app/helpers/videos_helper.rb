@@ -1,6 +1,10 @@
 module VideosHelper
   def embed vid
-    "<iframe class='youtube-player' type='text/html' width=580 height=385 src='http://www.youtube.com/embed/#{vid.youtube_id}' frameborder =0></iframe>".html_safe
+    video_html =<<-EOHTML.html_safe
+      <div class='embed_container'>
+        <iframe class='youtube_player' type='text/html' src='http://www.youtube.com/embed/#{vid.youtube_id}' frameborder =0>
+        </iframe>
+      </div>
+EOHTML
   end
-  
 end

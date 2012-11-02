@@ -2,7 +2,7 @@
 %html
   %head
     =render partial: 'shared/head'
-    =stylesheet_link_tag params[:controller]
+    =stylesheet_link_tag 'application', 'locations'
     %script{ src: "https://maps.googleapis.com/maps/api/js?v=3&sensor=true", type: "text/javascript" }
   %body{ onload: 'initialize()' }
     #container
