@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'newrelic_rpm'
 gem 'downthetube'
 gem 'net-sftp'
 gem 'net-ssh'
