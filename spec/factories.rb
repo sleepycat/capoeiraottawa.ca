@@ -1,9 +1,11 @@
+require 'factory_girl'
+
 FactoryGirl.define do
   factory :user do
     name "Mike Williamson"
     email "example@example.com"
     after(:build) do |user|
-      user.roles= [FactoryGirl.build(:role, :user_id => user)]
+      user.roles= [FactoryGirl.build(:role, :user_id => user.id)]
     end
   end
 
